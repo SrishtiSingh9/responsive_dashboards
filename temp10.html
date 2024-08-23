@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/30e66505fc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="temp10.css">
+
+    <title>Temp10</title>
+
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <div id="navl">
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                    </svg>
+                </li>
+                <li><input type="text" placeholder="⌕ &nbsp;Search..."></input></li>
+            </div>
+
+            <div id="navr">
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-table" viewBox="0 0 16 16">
+                        <path
+                            d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 2h-4v3h4zm0 4h-4v3h4zm0 4h-4v3h3a1 1 0 0 0 1-1zm-5 3v-3H6v3zm-5 0v-3H1v2a1 1 0 0 0 1 1zm-4-4h4V8H1zm0-4h4V4H1zm5-3v3h4V4zm4 4H6v3h4z" />
+                    </svg>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
+                    </svg>
+                    <span class="badge ">3</span>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-fullscreen" viewBox="0 0 16 16">
+                        <path
+                            d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5M.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5" />
+                    </svg>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-moon" viewBox="0 0 16 16">
+                        <path
+                            d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286" />
+                    </svg>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bell" viewBox="0 0 16 16">
+                        <path
+                            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
+                    </svg> <span class="badge two">5</span>
+                </li>
+                <li>
+                    <div id="pro"> <img src="img.png" alt="profile" class="profile">
+                        <p id="name">Anna Adame <br> Founder</p>
+                    </div>
+                </li>
+            </div>
+        </nav>
+    </header>
+
+    <section id="greet">
+        <div id="greetl">
+            <h1>Good Morning, Anna!</h1>
+            <p>Here's what's happening with your store today.</p>
+        </div>
+        <div id="greetr">
+            <li>
+                <div class="calender">
+                    <input type="text"><span><i class="fa-solid fa-calendar-days"></i></span>
+                </div>
+            </li>
+            <li class="more">
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-plus-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                        <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                    </svg> Add Product</p>
+            </li>
+
+            <li class="activity"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-activity" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2" />
+                </svg></li>
+        </div>
+    </section>
+
+    <main id="container">
+        <div id="box1">
+            <div class="part1" id="earning">
+                <div class="upper">
+                    <div class="con">
+                        <p>TOTAL EARNING</p>
+                    </div>
+                    <div class="con">
+                        <P><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                            </svg>+16.24%</P>
+                    </div>
+                </div>
+                <div class="lower">
+                    <div>
+                        <p><b>$559.25k</b></p>
+                        <p><a href="ww.google.com">View net earnings</a></p>
+                    </div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-currency-dollar" id="earn" viewBox="0 0 16 16">
+                            <path
+                                d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="part1" id="order">
+                <div class="upper">
+                    <div class="con">
+                        <p>TOTAL EARNING</p>
+                    </div>
+                    <div class="con">
+                        <P><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                            </svg>+16.24%</P>
+                    </div>
+                </div>
+                <div class="lower">
+                    <div>
+                        <p><b>$559.25k</b></p>
+                        <p><a href="ww.google.com">View net earnings</a></p>
+                    </div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-currency-dollar" id="earn" viewBox="0 0 16 16">
+                            <path
+                                d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z" />
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+            <div class="part1" id="customer">
+
+                <div class="upper">
+                    <div class="con">
+                        <p>TOTAL EARNING</p>
+                    </div>
+                    <div class="con">
+                        <P><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                            </svg>+16.24%</P>
+                    </div>
+                </div>
+                <div class="lower">
+                    <div>
+                        <p><b>$559.25k</b></p>
+                        <p><a href="ww.google.com">View net earnings</a></p>
+                    </div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-currency-dollar" id="earn" viewBox="0 0 16 16">
+                            <path
+                                d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="part1" id="balance">
+
+                <div class="upper">
+                    <div class="con">
+                        <p>TOTAL EARNING</p>
+                    </div>
+                    <div class="con">
+                        <P><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                            </svg>+16.24%</P>
+                    </div>
+                </div>
+                <div class="lower">
+                    <div>
+                        <p><b>$559.25k</b></p>
+                        <p><a href="ww.google.com">View net earnings</a></p>
+                    </div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-currency-dollar" id="earn" viewBox="0 0 16 16">
+                            <path
+                                d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="box2">
+            <div class="part2">
+                <div id="revenue1">
+                    <div>
+                        <p>Revenue</p>
+                    </div>
+                    <div class="rev2">
+                        <h3 class="rev">All </h3>
+                        <h3 class="rev">1M</h3>
+                        <h3 class="rev">6M</h3>
+                        <h3 class="rev tw">1Y</h3>
+                    </div>
+                </div>
+                </style>
+                <div id="revenue2">
+                    <Div class="num">
+                        <h5>7,585 </h5>
+                        <p>Orders</p>
+                    </Div>
+                    <Div class="num">
+                        <h5>$22.89k</h5>
+                        <p>Earnings</p>
+                    </Div>
+                    <Div class="num">
+                        <h5>367</h5>
+                        <p>Refunds</p>
+                    </Div>
+                    <Div class="num">
+                        <h5>18.92%</h5>
+                        <p>Conversation Ratio</p>
+                    </Div>
+                </div>
+                <div id="revenue3"><img src="1.png"></div>
+            </div>
+
+            <div class="part2">
+                <div id="sales1" style="display: flex;justify-content: space-between;align-items: center;">
+                    <div>
+                        <p>Sales by Locations</p>
+                    </div>
+                    <div>
+                        <p class="export">Export Report</p>
+                    </div>
+                </div>
+                <div id="sales2"><img src="2.png"></div>
+            </div>
+        </div>
+        <div id="box3">
+            <div class="part3" style="padding: 15px;">
+                <div id="best1">
+                    <div>
+                        <h3 style="font-weight: lighter;">Best Selling Products</h3>
+                    </div>
+                    <div>
+                        <span>Sort By :</span><select>
+                            <option selected>Today</option>
+                            <option>Yesterday</option>
+                            <option>Last 7 Days</option>
+                            <option>Last 30 Days</option>
+                            <option>This Month</option>
+                            <option>Last Month</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="best2">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="product">
+                                        <div><img
+                                                src="https://themesbrand.com/velzon/html/default/assets/images/products/img-1.png">
+                                        </div>
+                                        <div class="item">
+                                            <h5 class="name">Branded T-Shirts</h5>
+                                            <span>24 April 2021</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="item">
+                                    <h5>$29.00</h5><span>Price</span>
+                                </td>
+                                <td class="item">
+                                    <h5>62</h5><span>Orders</span>
+                                </td>
+                                <td class="item">
+                                    <h5>510</h5><span>Stock</span>
+                                </td>
+                                <td class="item">
+                                    <h5>$1,798</h5><span>Amount</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="product">
+                                        <div><img
+                                                src="	https://themesbrand.com/velzon/html/default/assets/images/products/img-2.png">
+                                        </div>
+                                        <div class="item">
+                                            <h5 class="name">
+                                                Bentwood Chair</h5>
+                                            <span>19 Mar 2021</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="item">
+                                    <h5>$85.20</h5><span>Price</span>
+                                </td>
+                                <td class="item">
+                                    <h5>35</h5><span>Orders</span>
+                                </td>
+                                <td class="item">
+                                    <h5 class="OFS">Out of stock</h5><span>Stock</span>
+                                </td>
+                                <td class="item">
+                                    <h5>$1,798</h5><span>Amount</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="product">
+                                        <div><img
+                                                src="https://themesbrand.com/velzon/html/default/assets/images/products/img-3.png">
+                                        </div>
+                                        <div class="item">
+                                            <h5 class="name">
+                                                Borosil Paper Cup</h5>
+                                            <span>01 Mar 2021</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="item">
+                                    <h5>$14.00</h5><span>Price</span>
+                                </td>
+                                <td class="item">
+                                    <h5>62</h5><span>Orders</span>
+                                </td>
+                                <td class="item">
+                                    <h5>749</h5><span>Stock</span>
+                                </td>
+                                <td class="item">
+                                    <h5>$1,120</h5><span>Amount</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="product">
+                                        <div><img
+                                                src="	https://themesbrand.com/velzon/html/default/assets/images/products/img-4.png">
+                                        </div>
+                                        <div class="item">
+                                            <h5 class="name">One Seater Sofa</h5>
+                                            <span>11 Feb 2021</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="item">
+                                    <h5>$127.50</h5><span>Price</span>
+                                </td>
+                                <td class="item">
+                                    <h5>56</h5><span>Orders</span>
+                                </td>
+                                <td class="item">
+                                    <h5 class="OFS">Out of stock</h5><span>Stock</span>
+                                </td>
+                                <td class="item">
+                                    <h5>$7,140</h5><span>Amount</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="product">
+                                        <div><img
+                                                src="	https://themesbrand.com/velzon/html/default/assets/images/products/img-5.png">
+                                        </div>
+                                        <div class="item">
+                                            <h5 class="name"> Stillbird Helmet</h5>
+                                            <span>17 Jan 2021</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="item">
+                                    <h5>$54</h5><span>Price</span>
+                                </td>
+                                <td class="item">
+                                    <h5>72</h5><span>Orders</span>
+                                </td>
+                                <td class="item">
+                                    <h5>805</h5><span>Stock</span>
+                                </td>
+                                <td class="item">
+                                    <h5>$3,996</h5><span>Amount</span>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <div class="search">
+                    <div>
+                        <p>Showing <b>5</b> of <b>25</b> Results</p>
+                    </div>
+                    <div>
+                        <span class="value"><i class="fa-solid fa-arrow-left"></i></span>
+                        <span class="value ho">1</span>
+                        <span class="value"
+                            style="color: white;background-color: #405189;border-color: #405189;">2</span>
+                        <span class="value ho">3</span>
+                        <span class="value"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="part3" style="padding: 15px;">
+                <div id="best1">
+                    <div>
+                        <h3 style="font-weight:lighter;">Top Sellers</h3>
+                    </div>
+
+                    <div>
+                        <select>
+                            <option>Download Report</option>
+                            <option class="report" selected>Report</option>
+                            <option>Export</option>
+                            <option>Import</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="best2">
+                    <table class="scroll">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="product">
+                                        <div><img class="bestpro"
+                                                src="https://themesbrand.com/velzon/html/default/assets/images/companies/img-1.png">
+                                        </div>
+                                        <div class="item">
+                                            <h5 class="name">iTest Factory</h5>
+                                            <span>Oliver Tyler</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="item">
+                                    <h5>Bags and Wallets</h5>
+                                </td>
+                                <td class="item">
+                                    <h5>8547</h5><span>Stock</span>
+                                </td>
+                                <td class="item">
+                                    <h5>$541200</h5>
+                                </td>
+                                <td class="item">
+                                    <h5>32%</h5><span class="chart"><i class="fa-solid fa-chart-simple"
+                                            style="color: #0ab09c;"></i></span>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="product">
+                                        <div><img class="bestpro"
+                                                src="https://themesbrand.com/velzon/html/default/assets/images/companies/img-2.png">
+                                        </div>
+                                        <div class="item">
+                                            <h5 class="name">Digitech Galaxy</h5>
+                                            <span>John Roberts</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="item">
+                                    <h5>Watches</h5>
+                                </td>
+                                <td class="item">
+                                    <h5>
+                                        895</h5><span>Stock</span>
+                                </td>
+                                <td class="item">
+                                    <h5>$75030</h5>
+                                </td>
+                                <td class="item">
+                                    <h5>79%</h5><span class="chart"><i class="fa-solid fa-chart-simple"
+                                            style="color: #0ab09c;"></i></span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="product">
+                                        <div><img class="bestpro"
+                                                src="https://themesbrand.com/velzon/html/default/assets/images/companies/img-3.png">
+                                        </div>
+                                        <div class="item">
+                                            <h5 class="name">Nesta Technologies</h5>
+                                            <span>Harley Fuller</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="item">
+                                    <h5>Bike Accessories</h5>
+                                </td>
+                                <td class="item">
+                                    <h5>3470</h5><span>Stock</span>
+                                </td>
+                                <td class="item">
+                                    <h5>$45600</h5>
+                                </td>
+                                <td class="item">
+                                    <h5>90%</h5><span class="chart"><i class="fa-solid fa-chart-simple"
+                                            style="color: #0ab09c;"></i></span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="product">
+                                        <div><img class="bestpro"
+                                                src="https://themesbrand.com/velzon/html/default/assets/images/companies/img-8.png">
+                                        </div>
+                                        <div class="item">
+                                            <h5 class="name">Zoetic Fashion</h5>
+                                            <span>James Bowen</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="item">
+                                    <h5>Clothes</h5>
+                                </td>
+                                <td class="item">
+                                    <h5>5488</h5><span>Stock</span>
+                                </td>
+                                <td class="item">
+                                    <h5>$29456</h5>
+                                </td>
+                                <td class="item">
+                                    <h5>40%</h5><span class="chart"><i class="fa-solid fa-chart-simple"
+                                            style="color: #0ab09c;"></i></span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="product">
+                                        <div><img class="bestpro"
+                                                src="https://themesbrand.com/velzon/html/default/assets/images/companies/img-5.png">
+                                        </div>
+                                        <div class="item">
+                                            <h5 class="name"> Meta4Systems</h5>
+                                            <span>Zoe Dennis</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="item">
+                                    <h5>Furniture</h5>
+                                </td>
+                                <td class="item">
+                                    <h5>4100</h5><span>Stock</span>
+                                </td>
+                                <td class="item">
+                                    <h5>$11260</h5>
+                                </td>
+                                <td class="item">
+                                    <h5>57%</h5><span class="chart"><i class="fa-solid fa-chart-simple"
+                                            style="color: #0ab09c;"></i></span>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <div class="search">
+                    <div>
+                        <p>Showing <b>5</b> of <b>25</b> Results</p>
+                    </div>
+                    <div>
+                        <span class="value"><i class="fa-solid fa-arrow-left"></i></span>
+                        <span class="value ho">1</span>
+                        <span class="value"
+                            style="color: white;background-color: #405189;border-color: #405189;">2</span>
+                        <span class="value ho">3</span>
+                        <span class="value"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="box4">
+            <div class="part4">
+                <div id="best1">
+                    <div>
+                        <h3 style="font-weight:lighter;">Stores Visits by Source</h3>
+                    </div>
+
+                    <div>
+                        <select>
+                            <option>Download Report</option>
+                            <option class="report" selected>Report</option>
+                            <option>Export</option>
+                            <option>Import</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="chart">
+                    <canvas id="myChart" width="auto" height="250px"></canvas>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+                    <script>
+                        const xValues = ["Direct", "Social", "Email", "Others", "Referrals"];
+                        const yValues = [44, 55, 41, 17, 15];
+                        const barColors = [
+                            "#405189",
+                            "#0AB39C",
+                            "#F7B84B",
+                            "#F06548",
+                            "#299CDB"
+                        ];
+                        new Chart("myChart", {
+                            type: "doughnut",
+                            data: {
+                                datasets: [{
+                                    backgroundColor: barColors,
+                                    data: yValues
+                                }],
+                                labels: xValues
+                            },
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="part4">
+                <div id="best1">
+                    <div>
+                        <h3 style="font-weight:lighter;">Recent Orders</h3>
+                    </div>
+
+                    <div>
+                        <span class="generate"><i class="fa-regular fa-file-lines"></i> Generate Reports</span>
+                    </div>
+                </div>
+                <div>
+                    <table class="padding">
+                        <tbody>
+
+                            <tr>
+                                <th>
+                                    <div class="item head">Customer</div>
+                                </th>
+                                <th>
+                                    <div class="item head">Order ID</div>
+                                </th>
+                                <th>
+                                    <div class="item head">Product</div>
+                                </th>
+                                <th>
+                                    <div class="item head">Amount</div>
+                                </th>
+                                <th>
+                                    <div class="item head">Vendor</div>
+                                </th>
+                                <th>
+                                    <div class="item head">Status</div>
+                                </th>
+                                <th>
+                                    <div class="item head">Rating</div>
+                                </th>
+                            </tr>
+
+                            <tr>
+
+                                <td>
+                                    <div class="product">
+                                        <div><img class="bestpro"
+                                                src="https://themesbrand.com/velzon/html/default/assets/images/companies/img-1.png">
+                                        </div>
+                                        <span>Alex Smith</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item" style="display: inline;">
+                                        <h5>#VZ2112</h5>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item">
+                                        <h5 class="name">Clothes</h5>
+                                    </div>
+                                </td>
+
+                                <td class="item">
+                                    <h5>$109.00</h5>
+                                </td>
+                                <td class="item">
+                                    <h5>Zoetic Fashion</h5>
+                                </td>
+                                <td class="item">
+                                    <span class="paid">Paid</span>
+                                </td>
+                                <td class="item">
+                                    <h5>5.0<span>(61 votes)</span></h5>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>
+                                    <div class="product">
+                                        <div><img class="bestpro"
+                                                src="https://themesbrand.com/velzon/html/default/assets/images/companies/img-1.png">
+                                        </div>
+                                        <span>Alex Smith</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item" style="display: inline;">
+                                        <h5>#VZ2112</h5>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item">
+                                        <h5 class="name">Clothes</h5>
+                                    </div>
+                                </td>
+
+                                <td class="item">
+                                    <h5>$109.00</h5>
+                                </td>
+                                <td class="item">
+                                    <h5>Zoetic Fashion</h5>
+                                </td>
+                                <td class="item">
+                                    <span class="pending"> Pending</span>
+                                </td>
+                                <td class="item">
+                                    <h5>5.0<span>(61 votes)</span></h5>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>
+                                    <div class="product">
+                                        <div><img class="bestpro"
+                                                src="https://themesbrand.com/velzon/html/default/assets/images/companies/img-1.png">
+                                        </div>
+                                        <span>Alex Smith</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item" style="display: inline;">
+                                        <h5>#VZ2112</h5>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item">
+                                        <h5 class="name">Clothes</h5>
+                                    </div>
+                                </td>
+
+                                <td class="item">
+                                    <h5>$109.00</h5>
+                                </td>
+                                <td class="item">
+                                    <h5>Zoetic Fashion</h5>
+                                </td>
+                                <td class="item">
+                                    <span class="paid">Paid</span>
+                                </td>
+                                <td class="item">
+                                    <h5>5.0<span>(61 votes)</span></h5>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>
+                                    <div class="product">
+                                        <div><img class="bestpro"
+                                                src="https://themesbrand.com/velzon/html/default/assets/images/companies/img-1.png">
+                                        </div>
+                                        <span>Alex Smith</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item" style="display: inline;">
+                                        <h5>#VZ2112</h5>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item">
+                                        <h5 class="name">Clothes</h5>
+                                    </div>
+                                </td>
+
+                                <td class="item">
+                                    <h5>$109.00</h5>
+                                </td>
+                                <td class="item">
+                                    <h5>Zoetic Fashion</h5>
+                                </td>
+                                <td class="item">
+                                    <span class="unpaid">Unpaid</span>
+                                </td>
+                                <td class="item">
+                                    <h5>5.0<span>(61 votes)</span></h5>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>
+                                    <div class="product">
+                                        <div><img class="bestpro"
+                                                src="https://themesbrand.com/velzon/html/default/assets/images/companies/img-1.png">
+                                        </div>
+                                        <span>Alex Smith</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item" style="display: inline;">
+                                        <h5>#VZ2112</h5>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item">
+                                        <h5 class="name">Clothes</h5>
+                                    </div>
+                                </td>
+
+                                <td class="item">
+                                    <h5>$109.00</h5>
+                                </td>
+                                <td class="item">
+                                    <h5>Zoetic Fashion</h5>
+                                </td>
+                                <td class="item">
+                                    <span class="paid">Paid</span>
+                                </td>
+                                <td class="item">
+                                    <h5>5.0<span>(61 votes)</span></h5>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div id="footer">
+                <div>2024 © Velzon.</div>
+                <div>Design & Develop by Themesbrand</div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

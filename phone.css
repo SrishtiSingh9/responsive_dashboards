@@ -1,0 +1,27 @@
+
+.navbar {
+    display: none;
+}
+
+.Menu {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+}
+
+.grid-container {
+    place-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+    
+  }
+  .grid{
+    font-size: 18px;
+  }
+  .box{
+    margin-left: 10px;
+  }
+  .Selection {
+    font-size: 15px;
+  }

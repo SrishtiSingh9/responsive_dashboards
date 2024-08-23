@@ -1,0 +1,637 @@
+body {
+    background-color: #FCFCFC;
+    font-family: Inter, Helvetica, sans-serif;
+    font-size: 13px;
+    margin: 1rem;
+}
+
+.main-container {
+    display: grid;
+    gap: 1rem;
+}
+
+p,
+h1,
+h3 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.upper,
+.middle {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(684px, 1fr));
+}
+
+#left {
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    display: grid;
+    gap: 1rem;
+}
+
+#right,
+.box1,
+.box2,
+.box3 {
+    background-color: #ffff;
+    border-radius: 10px;
+    border: 1px solid #F1F1F4;
+}
+
+
+.lower {
+    display: grid;
+    grid-template-columns: 33% 66%;
+    gap: 1rem;
+}
+
+@media (max-width:1199px) {
+    .lower {
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    }
+}
+
+@media (min-width:1200px) and (max-width:1399px) {
+    .min {
+        width: 50%;
+    }
+}
+
+@media (min-width:1098px) {
+    #left {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Active Projects*/
+#pink {
+    background-color: #F1416C;
+    color: white;
+}
+
+.extra {
+    padding: 15px 27px 0px;
+}
+
+progress {
+    width: 100%;
+    padding: 0px 12px 12px 12px;
+}
+
+/* Style for the progress bar background */
+progress::-webkit-progress-bar {
+    background-color: #F8A1B6;
+    /* Light pink background */
+}
+
+/* Style for the progress value */
+progress::-webkit-progress-value {
+    background-color: #FFFFFF;
+    /* White progress value */
+}
+
+.head {
+    font-size: 30px;
+}
+
+.description {
+    color: #FBCFDA;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 12px 0px;
+    margin-top: 1rem;
+}
+
+.padding {
+    padding: 0px 12px 12px;
+}
+
+/* Professionals*/
+.box1 #professionals {
+    padding: 15px 25px 0px;
+    margin: 6px 6px 6px 0px;
+}
+
+.box1 #hero {
+    padding: 25px;
+    margin-top: 10px;
+}
+
+.gray {
+    color: #99A1B7;
+}
+
+.heading {
+    font-size: 25px;
+    color: #252F4A;
+}
+
+.text {
+    color: #252F4A;
+    font-weight: bold;
+}
+
+
+#hero .flex {
+    justify-content: flex-start;
+}
+
+.img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.img p {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-top: 9px;
+}
+
+.one {
+
+    background-color: #F6C000;
+}
+
+.two {
+    left: -10px;
+}
+
+.three {
+    left: -20px;
+    background-color: #1B84FF;
+}
+
+.four {
+    left: -30px;
+}
+
+.five {
+    left: -40px;
+    background-color: #F8285A;
+}
+
+.six {
+    left: -50px;
+}
+
+.seven {
+    left: -60px;
+    background-color: #1E2129;
+}
+
+#hero .flex {
+    margin-top: 0px;
+    padding: 5px 0px;
+}
+
+/*Projects Earnings in April*/
+#project {
+    padding: 1rem 27px;
+}
+
+#earn {
+    display: flex;
+    align-items: center;
+    justify-content: first baseline;
+
+}
+
+.table {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.doller {
+    font-size: 15px;
+    color: #99A1B7;
+}
+
+.value {
+    font-size: 12px;
+    padding: 4px 6px;
+    color: #17C653;
+    background-color: #DFFFEA;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+#project .gray,
+.achieve p,
+#performance .gray,
+#heads .gray {
+    margin-top: 5px;
+}
+
+/*External Links*/
+
+#external,
+.min,
+.middle .padding {
+    padding: 25px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px;
+    margin: 6px;
+    color: #5DA3FF;
+    border-bottom: 1px dotted #DBDFE9;
+}
+
+.link p i {
+    color: #E0E3E9;
+}
+
+.external h2 {
+    color: #252F4A;
+    font-size: 15px;
+}
+
+/*Try our all new Enviroment with
+Pro Plan for Free*/
+#right .box1 {
+    background-position: 100% 30%;
+    background: url(https://preview.keenthemes.com/metronic8/demo1/assets/media/stock/900x600/42.png);
+    padding: 25px;
+}
+
+#right .box1 h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+#right .box1 span {
+    color: #F1416C;
+    border-bottom: 5px solid #FEDFE7;
+}
+
+#right .box1 button {
+    color: white;
+    background-color: #1E2129;
+    padding: 10px 14px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+#right .box1 img {
+    width: 200px;
+    height: 200px;
+
+}
+
+.center {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/*Performance Overview */
+
+#performance {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#performance h3,
+.achieve h3 {
+    font-size: 16px;
+    color: #071437;
+}
+
+#heads {
+    margin: 25px 0px;
+}
+
+#performance .week {
+    color: #252F4A;
+    background-color: #F9F9F9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.interaction img ,.tab img,#pinkk img{
+    width: 100%;
+}
+
+/*Authors Achievements*/
+#icons {
+    display: flex;
+}
+
+#icons .icon {
+    padding: 15px 20px;
+    border: 1px dotted #DBDFE9;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: #252F4A;
+}
+
+#icons .icon:hover>i {
+    color: #1B84FF;
+}
+
+#icons .icon:hover {
+    cursor: pointer;
+}
+
+#icons .SaaS {
+    border: 1px solid #DBDFE9;
+    border-bottom: 5px solid #1B84FF;
+}
+
+#icons .SaaS i {
+    color: #1B84FF;
+}
+
+#icons .fa-solid {
+    display: block;
+    color: #E0E3E9;
+}
+
+.icon p {
+    margin-top: 5px;
+}
+
+.detail {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.authname {
+    display: flex;
+    align-items: center;
+}
+
+.authname img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.detail .bor {
+    border-bottom: 1px dotted #dbdfdb;
+
+}
+
+.auth {
+    text-align: left;
+}
+
+.auth p a {
+    color: #252F4A;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.auth p a:hover {
+    color: #1B84FF;
+}
+
+.authname .auth p small {
+    font-size: 13px;
+}
+
+.auth .gray {
+    margin-top: 3px;
+    font-weight: normal;
+}
+
+.detail .details td {
+    padding: 8px;
+    text-align: center;
+}
+
+.details td i {
+    background-color: #F9F9F9;
+    color: #9FA7BB;
+    padding: 8px;
+    border-radius: 5px;
+}
+.detail .gray .lef {
+    text-align: left;
+}
+
+/*Featured*/
+#backblue {
+    width: 50%;
+    padding: 1rem;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    background-size: 100% 100%;
+    background-image: url(https://preview.keenthemes.com/metronic8/demo1/assets/media/stock/600x600/img-65.jpg);
+}
+
+#twosec {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    justify-content: space-evenly;
+}
+
+#featured,
+.people,
+.peoples {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.people img {
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.people {
+    margin-right: 10%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.blue {
+    width: 50%;
+    padding: 10px;
+    padding-left: 1.5rem;
+}
+
+.people .back {
+    background-color: #17C653;
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.peoples {
+    justify-content: flex-start;
+}
+#information .para {
+    font-weight: normal;
+    text-align: justify;
+    font-size: 15px;
+    margin: 5px 0px 12px 0px;
+    color: #788CAA;
+}
+.border {
+    border: 2px dotted #E5E8EF;
+    width: 36%;
+    padding: 10px 14px;
+    border-radius: 5px;
+}
+.border p {
+    color: #4B5675;
+    font-weight: bold;
+}
+#featured span{
+    color: #1B84FF;
+    background-color: #E9F3FF;
+    padding: 6px 15px;
+    border-radius: 5px;
+}
+#featured h1{
+    color: #071437;
+    margin-top: 5px;
+    font-size: 25px;
+}
+#projectss img{
+height: 35px;
+border-radius: 50%;
+}
+#projectss,.log{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.log .bluee{
+    display: flex;
+    height: 35px;
+    width: 35px;
+    background-color: #1B84FF;
+    color: white;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+#overlap2,.overlap3{
+position: relative;
+left: -20%;
+}
+.colour{
+    font-size: 14px;
+    color: #1B84FF;
+    cursor: pointer;
+    font-weight: bold;
+}
+.colour i{
+    color: #99A1B7;
+    margin-left: 5px;
+}
+.date{
+    background-color: #F9F9F9;
+    color:#99A1B7;
+    padding:10px 15px;
+    border-radius: 5px;
+}
+.date select{
+    border: none;
+    background-color: #F9F9F9;
+}
+.date:hover{
+    background-color: #eceeec;
+    cursor: pointer;
+}
+
+/*Avg. Agent Earnings*/
+.lower .box3{
+    padding: 1.5rem;
+}
+#pinkk{
+    margin-top: 1.5rem;
+}
+.log button{
+    border: none;
+    background-color:#FFFFFF ;
+    color: #788AA3;  
+    padding: 10px 14px;
+}
+.log .active,.log button:hover{
+    background-color: #F8285A;
+    color: #FFFFFF;
+    padding: 10px 14px;
+    border-radius: 5px;
+}
+#earnings{
+    width: 100%;
+    font-weight: bold;
+}
+#earnings .gray{
+    width: 60%;
+}
+#earnings td{
+    padding: 10px;
+}
+.col{
+    color: #252F4A;
+}
+/*Projects Stats
+Updated 37 minutes */
+#stats .fa-angle-up,#stats .fa-angle-down{
+    background-color: transparent;
+    padding: 0%;
+}
+#stats{
+    margin-top: 15px;
+}
+.onhold{
+color:#F6C000 ;
+background-color: #FFF8DD;
+padding: 8px;
+border-radius: 5px;
+}
+.inprocess{
+    color: #1B84FF;
+    background-color: #E9F3FF;
+    padding: 8px;
+    border-radius: 5px;
+}
+.completed{
+    color: #17C653;
+    background-color: #DFFFEA;
+    padding:8px;
+    border-radius: 5px;
+}
+.in,.de{
+    padding: 5px;
+    font-size: 12px;
+}
+.de{
+    color: #F8285A;
+    background-color: #FFEEF3;
+
+}
+#stats td{
+    padding-right: 1.5rem;
+}
+#stats .gray{
+    width: 150px;
+}
+/*Warephase Stats
+8k social visitors*/

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            border-radius: 10px;
+        }
+        body{
+            margin: 10px;
+        }
+        .box1 {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        div {
+            display: grid;
+        }
+
+        .element {
+            background-color: antiquewhite;
+            justify-content: left;
+            padding: 10px;
+            border: 1px solid black;
+            height: 100px;
+        }
+
+        .box2 {
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        }
+
+        .box3 {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .right-container {
+            gap: 1rem 0px;
+        }
+
+        .box1,.box2,.box3,.box4 ,#main-container{
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .box4 {
+            grid-template-columns: 33% 66%;
+        }
+        .six {
+            height: 50px;
+        }
+
+        .four {
+            height: 300px;
+        }
+
+        .five, .ten,
+        .eleven {
+            height: 200px;
+        }
+
+        @media (max-width: 664px) {
+            .three {
+                width: auto;
+            }
+            .box4 {
+            grid-template-columns: auto;
+        }
+        *{
+            width: auto;
+        }
+       
+        }
+        @media (min-width:430px) and (max-width:540px){
+            .three {
+                width: 93vw;
+            }
+            
+        }
+       .element p,.element h3 {
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="main-container">
+        <section class="box1">
+            <div class="element">
+                <p>Daily Sales</p>
+                <p>$249.95</p>
+                <h3>You Made an extra 35,000 this daily</h3>
+            </div>
+            <div class="element">2</div>
+            <div class="element three">3</div>
+        </section>
+        <section class="box2">
+            <div class="left-container">
+                <div class="element four">4</div>
+            </div>
+            <div class="right-container">
+                <div class="element five">5</div>
+                <div class="element six">6</div>
+            </div>
+        </section>
+        <section class="box3">
+            <div class="element">7</div>
+            <div class="element">8</div>
+            <div class="element three">9</div>
+        </section>
+        <section class="box4">
+            <div class="element ten">10</div>
+            <div class="element eleven">11</div>
+
+        </section>
+    </main>
+</body>
+
+</html>

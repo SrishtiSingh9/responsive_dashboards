@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp6</title>
+    <style>
+        * {
+            padding: 0px;
+        }
+
+        body {
+            background-color: #FCFCFC;
+            font-family: Inter, Helvetica, sans-serif;
+            font-size: 13px;
+            margin: 1rem;
+        }
+
+        main,
+        .main-container {
+            overflow-x: auto;
+        }
+
+        .main-container {
+            display: grid;
+            gap: 1rem;
+        }
+
+        p,
+        h1,
+        h3 {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .upper,
+        .middle {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(676px, 1fr));
+        }
+
+        #left {
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            display: grid;
+            gap: 1rem;
+        }
+
+        #right,
+        .box1,
+        .box2,
+        .box3 {
+            background-color: #ffff;
+            border-radius: 10px;
+            border: 1px solid #F1F1F4;
+        }
+
+
+        .lower {
+            display: grid;
+            grid-template-columns: 33% 66%;
+            gap: 1rem;
+        }
+
+
+        /* Active Projects*/
+        #pink {
+            background-color: #F1416C;
+            color: white;
+        }
+
+        .extra {
+            padding: 15px 27px 0px;
+        }
+
+        progress {
+            width: 100%;
+            padding: 0px 12px 12px 12px;
+        }
+
+        /* Style for the progress bar background */
+        progress::-webkit-progress-bar {
+            background-color: #F8A1B6;
+            /* Light pink background */
+        }
+
+        /* Style for the progress value */
+        progress::-webkit-progress-value {
+            background-color: #FFFFFF;
+            /* White progress value */
+        }
+
+        .head {
+            font-size: 30px;
+        }
+
+        .description {
+            color: #FBCFDA;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 12px 0px;
+            margin-top: 8%;
+        }
+
+        .padding {
+            padding: 0px 12px 12px;
+        }
+
+        /* Professionals*/
+        .box1 #professionals {
+            padding: 15px 25px 0px;
+            margin: 6px 6px 6px 0px;
+        }
+
+        .box1 #hero {
+            padding: 25px;
+            margin-top: 10px;
+        }
+
+        .gray {
+            color: #99A1B7;
+        }
+
+        .heading {
+            font-size: 25px;
+            color: #252F4A;
+        }
+
+        .text {
+            color: #252F4A;
+            font-weight: bold;
+        }
+
+
+        #hero .flex {
+            justify-content: flex-start;
+        }
+
+        .img {
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .img p {
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            margin-top: 9px;
+        }
+
+        .one {
+
+            background-color: #F6C000;
+        }
+
+        .two {
+            left: -10px;
+        }
+
+        .three {
+            left: -20px;
+            background-color: #1B84FF;
+        }
+
+        .four {
+            left: -30px;
+        }
+
+        .five {
+            left: -40px;
+            background-color: #F8285A;
+        }
+
+        .six {
+            left: -50px;
+        }
+
+        .seven {
+            left: -60px;
+            background-color: #1E2129;
+        }
+
+        #hero .flex {
+            margin-top: 0px;
+            padding: 5px 0px;
+        }
+
+        /*Projects Earnings in April*/
+        #project {
+            padding: 1rem 27px;
+        }
+
+        #earn {
+            display: flex;
+            align-items: center;
+            justify-content: first baseline;
+
+        }
+
+        .table {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .doller {
+            font-size: 15px;
+            color: #99A1B7;
+        }
+
+        .value {
+            font-size: 12px;
+            padding: 4px 6px;
+            color: #17C653;
+            background-color: #DFFFEA;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+
+        #project .gray,
+        .achieve p,
+        #performance .gray,
+        #heads .gray {
+            margin-top: 5px;
+        }
+
+        /*External Links*/
+
+        #external,
+        .min,
+        .middle .padding {
+            padding: 25px;
+        }
+
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 6px;
+            margin: 6px;
+            color: #5DA3FF;
+            border-bottom: 1px dotted #DBDFE9;
+        }
+
+        .link p i {
+            color: #E0E3E9;
+        }
+
+        .external h2 {
+            color: #252F4A;
+            font-size: 15px;
+        }
+
+        /*Try our all new Enviroment with
+Pro Plan for Free*/
+        #right .box1 {
+            background-position: 100% 30%;
+            background: url(https://preview.keenthemes.com/metronic8/demo1/assets/media/stock/900x600/42.png);
+            padding: 25px;
+        }
+
+        #right .box1 h1 {
+            font-size: 32px;
+            text-align: center;
+        }
+
+        #right .box1 span {
+            color: #F1416C;
+            border-bottom: 5px solid #FEDFE7;
+        }
+
+        #right .box1 button {
+            color: white;
+            background-color: #1E2129;
+            padding: 10px 14px;
+            border-radius: 5px;
+            border: none;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #right .box1 img {
+            width: 200px;
+            height: 200px;
+
+        }
+
+        .center {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        /*Performance Overview */
+
+        #performance {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #performance h3,
+        .achieve h3 {
+            font-size: 16px;
+            color: #071437;
+        }
+
+        #heads {
+            margin: 25px 0px;
+        }
+
+        #performance .week {
+            color: #252F4A;
+            background-color: #F9F9F9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .interaction img,
+        .tab img,
+        #pinkk img {
+            width: 100%;
+        }
+
+        /*Authors Achievements*/
+        #icons {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #icons .icon {
+            padding: 1rem;
+            border: 1px dotted #DBDFE9;
+            margin: 0.5rem;
+            border-radius: 5px;
+            text-align: center;
+            color: #252F4A;
+        }
+
+        #icons .icon:hover>i {
+            color: #1B84FF;
+        }
+
+        #icons .icon:hover {
+            cursor: pointer;
+        }
+
+        #icons .SaaS {
+            border: 1px solid #DBDFE9;
+            border-bottom: 5px solid #1B84FF;
+        }
+
+        #icons .SaaS i {
+            color: #1B84FF;
+        }
+
+        #icons .fa-solid {
+            display: block;
+            color: #E0E3E9;
+        }
+
+        .icon p {
+            margin-top: 5px;
+        }
+
+        .detail {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .authname {
+            display: flex;
+            align-items: center;
+        }
+
+        .authname img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .detail .bor {
+            border-bottom: 1px dotted #dbdfdb;
+
+        }
+
+        .auth {
+            text-align: left;
+        }
+
+        .auth p a {
+            color: #252F4A;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .auth p a:hover {
+            color: #1B84FF;
+        }
+
+        .authname .auth p small {
+            font-size: 13px;
+        }
+
+        .auth .gray {
+            margin-top: 3px;
+            font-weight: normal;
+        }
+
+        .detail .details td {
+            padding: 8px;
+            text-align: center;
+        }
+
+        .details td i {
+            background-color: #F9F9F9;
+            color: #9FA7BB;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        .detail .gray .lef {
+            text-align: left;
+        }
+
+        /*Featured*/
+        #backblue {
+            width: 50%;
+            padding: 1rem;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            background-size: 100% 100%;
+            background-image: url(https://preview.keenthemes.com/metronic8/demo1/assets/media/stock/600x600/img-65.jpg);
+        }
+
+        #twosec {
+            display: flex;
+            flex-direction: row;
+            padding: 1rem;
+            justify-content: space-evenly;
+        }
+
+        #featured,
+        .people,
+        .peoples {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .people img {
+            width: 35px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .people {
+            margin-right: 10%;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .blue {
+            width: 50%;
+            padding: 10px;
+            padding-left: 1.5rem;
+        }
+
+        .people .back {
+            background-color: #17C653;
+            padding: 8px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .peoples {
+            justify-content: flex-start;
+        }
+
+        #information .para {
+            font-weight: normal;
+            text-align: justify;
+            font-size: 15px;
+
+            color: #788CAA;
+        }
+
+        .border {
+            border: 2px dotted #E5E8EF;
+            width: 36%;
+            padding: 10px 14px;
+            border-radius: 5px;
+        }
+
+        .border p {
+            color: #4B5675;
+            font-weight: bold;
+        }
+
+        #featured span {
+            color: #1B84FF;
+            background-color: #E9F3FF;
+            padding: 6px 15px;
+            border-radius: 5px;
+        }
+
+        #featured h1 {
+            color: #071437;
+            margin-top: 5px;
+            font-size: 25px;
+        }
+
+        #projectss img {
+            height: 35px;
+            border-radius: 50%;
+        }
+
+        #projectss,
+        .log {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .log .bluee {
+            display: flex;
+            height: 35px;
+            width: 35px;
+            background-color: #1B84FF;
+            color: white;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        #overlap2,
+        .overlap3 {
+            position: relative;
+            left: -20%;
+        }
+
+        .colour {
+            font-size: 14px;
+            color: #1B84FF;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .colour i {
+            color: #99A1B7;
+            margin-left: 5px;
+        }
+
+        .date {
+            background-color: #F9F9F9;
+            color: #99A1B7;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .date select {
+            border: none;
+            background-color: #F9F9F9;
+        }
+
+        .date:hover {
+            background-color: #eceeec;
+            cursor: pointer;
+        }
+
+        /*Avg. Agent Earnings*/
+        .lower .box3 {
+            padding: 1.5rem;
+        }
+
+        #pinkk {
+            margin-top: 1.5rem;
+        }
+
+        .log button {
+            border: none;
+            background-color: #FFFFFF;
+            color: #788AA3;
+            padding: 10px 14px;
+        }
+
+        .log .active,
+        .log button:hover {
+            background-color: #F8285A;
+            color: #FFFFFF;
+            padding: 10px 14px;
+            border-radius: 5px;
+        }
+
+        #earnings {
+            width: 100%;
+            font-weight: bold;
+        }
+
+        #earnings .gray {
+            width: 60%;
+        }
+
+        #earnings td {
+            padding: 10px;
+        }
+
+        .col {
+            color: #252F4A;
+        }
+
+        /*Projects Stats
+Updated 37 minutes */
+        #stats .fa-angle-up,
+        #stats .fa-angle-down {
+            background-color: transparent;
+            padding: 0%;
+        }
+
+        #stats {
+            margin-top: 15px;
+        }
+
+        .onhold {
+            color: #F6C000;
+            background-color: #FFF8DD;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        .inprocess {
+            color: #1B84FF;
+            background-color: #E9F3FF;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        .completed {
+            color: #17C653;
+            background-color: #DFFFEA;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        .in,
+        .de {
+            padding: 5px;
+            font-size: 12px;
+        }
+
+        .de {
+            color: #F8285A;
+            background-color: #FFEEF3;
+
+        }
+
+        #stats td {
+            padding-right: 1.5rem;
+        }
+
+        #stats .gray {
+            width: 150px;
+        }
+
+        @media (max-width:1199px) {
+            .lower {
+                grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+            }
+        }
+
+        @media (min-width:1200px) and (max-width:1399px) {
+            .min {
+                width: 50%;
+            }
+        }
+
+        @media (max-width:767px) {
+
+            #left,
+            .middle,
+            .lower,
+            .upper {
+                grid-template-columns: repeat(auto-fit, minmax(377px, 1fr));
+            }
+        }
+
+        @media (min-width:1098px) {
+            #left {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
+        @media (max-width:567px) {
+            .people {
+                margin: 5px 0px 5px 0px;
+            }
+
+            .border {
+                padding: 5px;
+            }
+            .blue {
+                width: 60%;
+            }
+
+            #featured span {
+                padding: 5px 10px;
+                font-size: 9px;
+            }
+
+            #featured h1 {
+                font-size: 21px;
+            }
+        }
+
+        @media (max-width:390px) {
+
+            #left,
+            .middle,
+            .lower,
+            .upper {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+
+        }
+
+        /*Warephase Stats
+8k social visitors*/
+    </style>
+
+    <script src="https://kit.fontawesome.com/30e66505fc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main class="main-container">
+        <section class="upper">
+            <section id="left">
+                <div class="box1" id="pink">
+                    <div class="extra">
+                        <h1 class="head">69</h1>
+                        <p class="description">Active Projects</p>
+                    </div>
+                    <div class="flex">
+                        <p class="description">43 Pending</p>
+                        <p class="description">72%</p>
+                    </div>
+                    <div class="padding"><progress max="100" value="72"></progress></div>
+                </div>
+
+                <div class="box1" id="project">
+                    <div>
+                        <h1 class="heading"><span class="doller">$</span> 69,700<span class="value"> <i
+                                    class="fa-solid fa-angle-up" style="color: #17c653;"></i> 2.2 %</span></h1>
+
+                        <p class="gray">Projects Earnings in April</p>
+                    </div>
+                    <div id="earn">
+                        <div><img src="8.png" alt=""></div>
+                        <div style="width: 100%;">
+                            <div class="table">
+                                <p class="gray">
+                                    <i class="fa-solid fa-minus fa-xl" style="color: #17c653;"></i> CRM
+                                </p>
+                                <p class="text">$7,660</p>
+                            </div>
+                            <div class="table">
+
+                                <p class="gray"><i class="fa-solid fa-minus fa-xl" style="color: #1b84ff;"></i> Mivy
+                                    App</p>
+                                <p class="text">$2,820</p>
+                            </div>
+                            <div class="table">
+                                <p class="gray"><i class="fa-solid fa-minus fa-xl" style="color: #E4E6EF;"></i> Others
+                                </p>
+                                <p class="text">$45,257</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="box1">
+                    <div id="professionals">
+                        <h1 class="heading"> 357</h1>
+                        <p class="gray">Professionals</p>
+                    </div>
+                    <div id="hero">
+                        <p class="text">Today’s Heroes</p>
+                        <div class="flex">
+                            <div class="img one">
+                                <p>A</p>
+                            </div>
+                            <div>
+                                <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/avatars/300-11.jpg"
+                                    alt="" class="img two">
+                            </div>
+                            <div class="img three">
+                                <P>S</P>
+                            </div>
+                            <div>
+                                <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/avatars/300-2.jpg"
+                                    alt="" class="img four">
+                            </div>
+                            <div class="img five">
+                                <P>P</P>
+                            </div>
+                            <div>
+                                <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/avatars/300-12.jpg"
+                                    alt="" class="img six">
+                            </div>
+                            <div class="img seven">
+                                <P>+42</P>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box1" id="external">
+                    <div class="external">
+                        <h2>External Links</h2>
+                    </div>
+                    <div class="link">
+                        <p>Avg. Client Rating</p>
+                        <p><i class="fa-solid fa-arrow-up-right-from-square"></i></p>
+                    </div>
+                    <div class="link">
+                        <p>Instagram Followers</p>
+                        <p><i class="fa-solid fa-arrow-up-right-from-square"></i></p>
+                    </div>
+                    <div class="link">
+                        <p>Google Ads CPC</p>
+                        <p><i class="fa-solid fa-arrow-up-right-from-square"></i></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="right">
+                <div class="box1">
+                    <div>
+                        <h1>Try our all new Enviroment with
+                            <br><span>Pro Plan</span> for Free
+                        </h1>
+                    </div>
+                    <div class="center"><button>Upgrade Now</button></div>
+                    <div class="center"> <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/illustrations/misc/upgrade-dark.svg
+                        " alt=""></div>
+                </div>
+            </section>
+        </section>
+
+
+        <section class="middle">
+            <div class="box2 padding">
+                <div id="performance">
+                    <div>
+                        <h3>Performance Overview</h3>
+                        <p class="gray"> Users from all channels</p>
+                    </div>
+                    <div>
+                        <span class="gray">Month</span>
+                        <span class="week">Week</span>
+                    </div>
+                </div>
+                <div id="heads">
+                    <h1 class="heading"><span class="doller">$</span> 8,55<span class="value"> <i
+                                class="fa-solid fa-angle-up" style="color: #17c653;"></i> 2.2 %</span></h1>
+
+                    <p class="gray"> Avarage cost per interaction</p>
+
+                </div>
+                <div class="interaction"><img src="9.png" alt="not"></div>
+            </div>
+
+
+            <div class="box2 min">
+                <div>
+                    <div class="achieve">
+                        <h3>Authors Achievements</h3>
+                        <p class="gray"> Avg. 69.34% Conv. Rate</p>
+                    </div>
+                    <div></div>
+                </div>
+
+                <div id="icons">
+                    <div class="icon SaaS"><i class="fa-solid fa-hotel "></i>
+                        <p>SaaS</p>
+                    </div>
+                    <div class="icon"> <i class="fa-solid fa-bitcoin-sign "></i>
+                        <p>Crypto</p>
+                    </div>
+                    <div class="icon"><i class="fa-solid fa-thumbs-up"></i>
+                        <p>Social</p>
+                    </div>
+                    <div class="icon"><i class="fa-solid fa-mobile-screen-button"></i>
+                        <p>Mobile</p>
+                    </div>
+                    <div class="icon"><i class="fa-solid fa-paper-plane"></i>
+                        <p>Others</p>
+                    </div>
+                </div>
+                <div class="author" style="overflow: scroll;">
+                    <table class="detail">
+                        <tr class="details gray">
+                            <td class="lef">Author</td>
+                            <td>Conv.</td>
+                            <td>Chart</td>
+                            <td>View</td>
+                        </tr>
+                        <tr class="details bor">
+                            <td class="authname">
+                                <div>
+                                    <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/avatars/300-3.jpg"
+                                        alt="">
+                                </div>
+                                <div class="auth">
+                                    <p><a href="temp6.html">Jacob Jones</a></p>
+                                    <p class="gray"><small>New York</small></p>
+                                </div>
+                            </td>
+                            <td>52.34%</td>
+                            <td style="width: 50px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 300 100"
+                                    fill="none">
+                                    <!-- Smooth Straight Line -->
+                                    <path d="M10,50 L50,30 L90,50 L130,30 L170,50 L210,30 L250,50 L290,40"
+                                        stroke="#17C653" stroke-width="6" fill="none" stroke-linecap="round" />
+                                </svg>
+
+                            </td>
+                            <td><i class="fa-solid fa-arrow-right-long"></i></td>
+                        </tr>
+
+                        <tr class="details bor">
+                            <td class="authname">
+                                <div>
+                                    <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/avatars/300-2.jpg"
+                                        alt="">
+                                </div>
+                                <div class="auth">
+                                    <p><a href="temp6.html">Jacob Jones</a></p>
+                                    <p class="gray"><small>New York</small></p>
+                                </div>
+                            </td>
+                            <td>52.34%</td>
+                            <td style="width: 50px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 300 100"
+                                    fill="none">
+                                    <!-- Smooth Straight Line -->
+                                    <path d="M10,50 L50,30 L90,50 L130,30 L170,50 L210,30 L250,50 L290,40"
+                                        stroke="#17C653" stroke-width="6" fill="none" stroke-linecap="round" />
+                                </svg>
+
+                            </td>
+                            <td><i class="fa-solid fa-arrow-right-long"></i></td>
+                        </tr>
+
+                        <tr class="details bor">
+                            <td class="authname">
+                                <div>
+                                    <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/avatars/300-9.jpg"
+                                        alt="">
+                                </div>
+                                <div class="auth">
+                                    <p><a href="temp6.html">Jacob Jones</a></p>
+                                    <p class="gray"><small>New York</small></p>
+                                </div>
+                            </td>
+                            <td>52.34%</td>
+                            <td style="width: 50px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 300 100"
+                                    fill="none">
+                                    <!-- Smooth Straight Line -->
+                                    <path d="M10,50 L50,30 L90,50 L130,30 L170,50 L210,30 L250,50 L290,40"
+                                        stroke="#17C653" stroke-width="6" fill="none" stroke-linecap="round" />
+                                </svg>
+
+                            </td>
+                            <td><i class="fa-solid fa-arrow-right-long"></i></td>
+                        </tr>
+
+                        <tr class="details">
+                            <td class="authname">
+                                <div>
+                                    <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/avatars/300-7.jpg"
+                                        alt="">
+                                </div>
+                                <div class="auth">
+                                    <p><a href="temp6.html">Jacob Jones</a></p>
+                                    <p class="gray"><small>New York</small></p>
+                                </div>
+                            </td>
+                            <td>52.34%</td>
+                            <td style="width: 50px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 300 100"
+                                    fill="none">
+                                    <!-- Smooth Straight Line -->
+                                    <path d="M10,50 L50,30 L90,50 L130,30 L170,50 L210,30 L250,50 L290,40"
+                                        stroke="#F8285A" stroke-width="6" fill="none" stroke-linecap="round" />
+                                </svg>
+
+                            </td>
+                            <td><i class="fa-solid fa-arrow-right-long"></i></td>
+                        </tr>
+
+
+
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="middle">
+            <div class="box2" id="twosec">
+                <div id="backblue"></div>
+                <div class="blue">
+                    <div id="featured">
+                        <div>
+                            <p class="gray">Featured</p>
+                            <h1>9 Degree</h1>
+                        </div>
+                        <div><span>In Process</span></div>
+                    </div>
+                    <div class="peoples">
+                        <div class="people">
+                            <div>
+                                <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/avatars/300-3.jpg"
+                                    alt="">
+                            </div>
+                            <div>
+                                <small class="gray">Manager</small>
+                                <p>Robert Fox</p>
+                            </div>
+                        </div>
+                        <div class="people">
+                            <div class="back">
+                                <i class="fa-solid fa-dharmachakra fa-xl" style="color: #ffffff;"></i>
+                            </div>
+                            <div>
+                                <small class="gray">Budget</small>
+                                <p>$64.800</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="information">
+                        <div>
+                            <p class="gray para">Flat cartoony illustrations with vivid unblended colors and
+                                asymmetrical beautiful purple hair
+                                lady</p>
+                        </div>
+                        <div class="people">
+                            <div class="border">
+                                <p>Feb 6, 2021</p>
+                                <small class="gray">Due Date</small>
+                            </div>
+                            <div class="border">
+                                <p>$284,900</p>
+                                <small class="gray">Budget</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="projectss">
+                        <div class="log">
+                            <div>
+                                <img
+                                    src="https://preview.keenthemes.com/metronic8/demo1/assets/media/avatars/300-3.jpg">
+                            </div>
+                            <div>
+                                <img id="overlap2"
+                                    src="https://preview.keenthemes.com/metronic8/demo1/assets/media/avatars/300-7.jpg">
+                            </div>
+
+                            <div class="bluee overlap3">
+                                <p>S</p>
+                            </div>
+                        </div>
+                        <div class="colour"> View Project <i class=" fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="box2 min">
+                <div class="log">
+                    <div class="achieve">
+                        <h3>Performance</h3>
+                        <p class="gray"> 1,046 Inbound Calls today</p>
+                    </div>
+                    <div class="date">
+                        <span>6 Aug 2024 <i class="fa-solid fa-calendar-days"></i></span>
+                    </div>
+                </div>
+                <div class="tab">
+                    <img src="10.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="lower">
+            <div class="box3">
+                <div>
+                    <h1 class="heading"><span class="doller">$</span> 3,274.94<span class="value">
+                            <i class="fa-solid fa-angle-up" style="color: #17c653;"></i> 9.2 %</span></h1>
+
+                    <p class="gray" style="margin-top: 5px;">Avg. Agent Earnings</p>
+                    <div></div>
+                </div>
+                <div id="pinkk">
+                    <div class="log">
+                        <button class="active">1d</button>
+                        <button>5d</button>
+                        <button>1m</button>
+                        <button>6m</button>
+                        <button>1y</button>
+                    </div>
+                    <img src="11.png" alt="">
+                </div>
+                <div>
+                    <table id="earnings">
+                        <tbody>
+                            <tr>
+                                <td class="gray">2:30 PM</td>
+                                <td class="col">$2,756.26</td>
+                                <td style="color: #F7295B;">-139.34</td>
+                            </tr>
+                            <tr>
+                                <td class="gray">3:10 PM</td>
+                                <td class="col">$3,207.03 </td>
+                                <td style="color: #3DCB6D;">+576.24</td>
+                            </tr>
+                            <tr>
+                                <td class="gray">3.55PM</td>
+                                <td class="col">$3,274.94</td>
+                                <td style="color: #3DCB6D;">+124.03</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="box3">
+                <div class="log">
+                    <div class="achieve">
+                        <h3>Projects Stats</h3>
+                        <p class="gray"> Updated 37 minutes ago</p>
+                    </div>
+                    <div class="date">
+                        <span class="col">History </span>
+                    </div>
+                </div>
+                <div class="author" style="overflow-x:scroll;white-space:nowrap ;">
+                    <table class="detail" id="stats">
+                        <tr class="details gray">
+                            <td class="lef">ITEM</td>
+                            <td>BUDGET</td>
+                            <td>PROGRESS</td>
+                            <td>STATUS</td>
+                            <td>CHART</td>
+                            <td>VIEW</td>
+                        </tr>
+                        <tr class="details bor">
+                            <td class="authname">
+                                <div>
+                                    <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/avatars/300-3.jpg"
+                                        alt="">
+                                </div>
+                                <div class="auth">
+                                    <p><a href="temp6.html">Jacob Jones</a></p>
+                                    <p class="gray"><small>New York</small></p>
+                                </div>
+                            </td>
+                            <td>52.34%</td>
+                            <td> <span class="completed in"><i class="fa-solid fa-angle-up" style="color: #17c653;"></i>
+                                    9.2%</span></td>
+                            <td> <span class="inprocess">In Process</span> </td>
+                            <td style="width: 50px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 300 100"
+                                    fill="none">
+                                    <!-- Smooth Straight Line -->
+                                    <path d="M10,50 L50,30 L90,50 L130,30 L170,50 L210,30 L250,50 L290,40"
+                                        stroke="#17C653" stroke-width="6" fill="none" stroke-linecap="round" />
+                                </svg>
+
+                            </td>
+                            <td><i class="fa-solid fa-arrow-right-long"></i></td>
+                        </tr>
+
+                        <tr class="details bor">
+                            <td class="authname">
+                                <div>
+                                    <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/avatars/300-2.jpg"
+                                        alt="">
+                                </div>
+                                <div class="auth">
+                                    <p><a href="temp6.html">Jacob Jones</a></p>
+                                    <p class="gray"><small>New York</small></p>
+                                </div>
+                            </td>
+                            <td>52.34%</td>
+                            <td> <span class="completed de"><i class="fa-solid fa-angle-down"
+                                        style="color: #F8285A;"></i> 0.4%</span></td>
+
+                            <td> <span class="completed">Completed</span></td>
+                            <td style="width: 50px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 300 100"
+                                    fill="none">
+                                    <!-- Smooth Straight Line -->
+                                    <path d="M10,50 L50,30 L90,50 L130,30 L170,50 L210,30 L250,50 L290,40"
+                                        stroke="#17C653" stroke-width="6" fill="none" stroke-linecap="round" />
+                                </svg>
+
+                            </td>
+                            <td><i class="fa-solid fa-arrow-right-long"></i></td>
+                        </tr>
+
+                        <tr class="details bor">
+                            <td class="authname">
+                                <div>
+                                    <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/avatars/300-9.jpg"
+                                        alt="">
+                                </div>
+                                <div class="auth">
+                                    <p><a href="temp6.html">Jacob Jones</a></p>
+                                    <p class="gray"><small>New York</small></p>
+                                </div>
+                            </td>
+                            <td>52.34%</td>
+                            <td> <span class="completed in"><i class="fa-solid fa-angle-up" style="color: #17c653;"></i>
+                                    9.2%</span></td>
+                            <td> <span class="inprocess">In Process</span> </td>
+                            <td style="width: 50px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 300 100"
+                                    fill="none">
+                                    <!-- Smooth Straight Line -->
+                                    <path d="M10,50 L50,30 L90,50 L130,30 L170,50 L210,30 L250,50 L290,40"
+                                        stroke="#17C653" stroke-width="6" fill="none" stroke-linecap="round" />
+                                </svg>
+
+                            </td>
+                            <td><i class="fa-solid fa-arrow-right-long"></i></td>
+                        </tr>
+
+                        <tr class="details bor">
+                            <td class="authname">
+                                <div>
+                                    <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/avatars/300-7.jpg"
+                                        alt="">
+                                </div>
+                                <div class="auth">
+                                    <p><a href="temp6.html">Jacob Jones</a></p>
+                                    <p class="gray"><small>New York</small></p>
+                                </div>
+                            </td>
+                            <td>52.34%</td>
+                            <td> <span class="completed in"><i class="fa-solid fa-angle-up" style="color: #17c653;"></i>
+                                    9.2%</span></td>
+                            <td> <span class="inprocess">In Process</span> </td>
+                            <td style="width: 50px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 300 100"
+                                    fill="none">
+                                    <!-- Smooth Straight Line -->
+                                    <path d="M10,50 L50,30 L90,50 L130,30 L170,50 L210,30 L250,50 L290,40"
+                                        stroke="#F8285A" stroke-width="6" fill="none" stroke-linecap="round" />
+                                </svg>
+
+                            </td>
+                            <td><i class="fa-solid fa-arrow-right-long"></i></td>
+                        </tr>
+                        <tr class="details">
+                            <td class="authname">
+                                <div>
+                                    <img src="https://preview.keenthemes.com/metronic8/demo1/assets/media/avatars/300-7.jpg"
+                                        alt="">
+                                </div>
+                                <div class="auth">
+                                    <p><a href="temp6.html">Jacob Jones</a></p>
+                                    <p class="gray"><small>New York</small></p>
+                                </div>
+                            </td>
+                            <td>52.34%</td>
+                            <td> <span class="completed de"><i class="fa-solid fa-angle-down"
+                                        style="color: #F8285A;"></i> 0.4%</span></td>
+                            <td> <span class="onhold">On Hold</span> </td>
+                            <td style="width: 50px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 300 100"
+                                    fill="none">
+                                    <!-- Smooth Straight Line -->
+                                    <path d="M10,50 L50,30 L90,50 L130,30 L170,50 L210,30 L250,50 L290,40"
+                                        stroke="#F8285A" stroke-width="6" fill="none" stroke-linecap="round" />
+                                </svg>
+
+                            </td>
+                            <td><i class="fa-solid fa-arrow-right-long"></i></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="box3">
+                <div class="log">
+                    <div class="achieve">
+                        <h3>Warephase Stats</h3>
+                        <p class="gray"> 8k social visitors</p>
+                    </div>
+                    <div class="date">
+                        <span class="col">PDF Report </span>
+                    </div>
+                </div>
+                <div>
+                    <img src="12.png" alt="" style="width: 100%;height: 75%;">
+                </div>
+            </div>
+            <div class="box3">
+                <div class="achieve">
+                    <h3>Human Resources</h3>
+                    <p class="gray"> Reports by states and ganders</p>
+                </div>
+                <div>
+                    <img src="13.png" alt="" style="width: 100%;height: 75%;">
+                </div>
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>

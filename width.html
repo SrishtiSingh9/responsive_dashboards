@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {    
+            background-color: #F4F3EF;
+            font-size: 14px;
+            color: #212529;
+            font-family: Montserrat, Helvetica Neue, Arial, sans-serif;
+        }
+
+        .main-container {
+            display: grid;
+            gap: 1rem;
+            padding: 0px 15px;
+        }
+
+        .content {
+            display: grid;
+            gap: 1rem;
+        }
+
+        #body1,
+        #body5 {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+
+        #body2,
+        #body4 {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        #gri {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .box4,
+        .box3,
+        .box2,
+        .box22,
+        .box44 {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 2px #E1E0DC;
+        }
+
+        #body1 {
+            margin-top: 15px;
+        }
+
+        #body5 {
+            margin-bottom: 15px;
+        }
+
+        #body1,
+        #body2,
+        #body3,
+        #body4,
+        #body5 {
+            padding: 0px;
+        }
+
+        .typography1 {
+            font-size: 28px;
+        }
+
+        .typography2 {
+            font-size: 22px;
+        }
+
+        .typography3 {
+            font-size: 16px;
+        }
+
+        .typography4 {
+            font-size: 12px;
+        }
+
+        .typography5 {
+            font-size: 10px;
+        }
+
+        .typography6 {
+            font-size: 24px;
+        }
+
+        .color1 {
+            color: #252422;
+        }
+
+        .color2 {
+            color: #9a9a9a;
+        }
+
+        .color3 {
+            color: white;
+        }
+
+        .primary {
+            background-color: #EF8157;
+            padding: 6px;
+        }
+
+        .secondary {
+            background-color: #6BD098;
+            padding: 6px;
+        }
+
+        .success {
+            background-color: #FBC658;
+            padding: 6px;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .pd-mid {
+            padding: 15px 15px 10px;
+        }
+
+        .pd-head {
+            padding: 15px 15px 0px;
+        }
+
+        .pd-footer1 {
+            padding: 0px 15px 15px;
+        }
+
+        .pd-footer2 {
+            padding: 12px 20px;
+        }
+
+        .bd-rd1 {
+            border-radius: 10px;
+        }
+
+        .bd-rd2 {
+            border-radius: 50%;
+        }
+
+        .pd-lower {
+            padding: 0px 15px;
+        }
+
+        .border-top {
+            border-top: 1px solid #E5E5E5;
+            margin: 14px 0px;
+        }
+
+        @media (min-width: 576px) and (max-width: 991px) {
+
+            #body1,
+            #body2 {
+                grid-template-columns: repeat(auto-fit, minmax(314px, 1fr));
+            }
+        }
+
+        @media (max-width: 575px) {
+            #body1 {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 767px) {
+
+            #gri,
+            #body4,
+            #body5 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        h1 {
+            font-weight: normal;
+        }
+
+        #body1 .fa-solid,
+        #body1 .fa-regular {
+            color: #66615b;
+            margin-right: 5px;
+        }
+
+        .bi-globe {
+            color: #FBC658;
+        }
+
+        .bi-bezier {
+            color: #EF8157;
+        }
+
+        .bi-cash-coin {
+            color: #6BD098;
+        }
+
+        .bi-heart {
+            color: #51CBCE;
+        }
+
+        .pd-lower p,
+        .pd-lower h1 {
+            margin: 8px;
+            text-align: right;
+        }
+
+        #body2 .pd-mid h3 {
+            margin-top: 0px;
+            text-align: center;
+        }
+
+        .width {
+            width: 100%;
+        }
+
+        .blue {
+            height: 10px;
+            width: 10px;
+            background-color: #51BCDA;
+        }
+
+        #body5 p,
+        #body5 h3,
+        #body5 h1,
+        #body4 p {
+            margin: 8px 0px;
+        }
+
+        #body3 .pd-mid td,
+        #body4 .pd-mid td {
+            padding: 12px 8px;
+            border-top: 1px solid #DEE2E6;
+        }
+
+        #body3 .pd-mid td img {
+            width: 23px;
+            height: 17px;
+        }
+
+        .collapse {
+            border-collapse: collapse;
+        }
+
+        .size {
+            width: 40px;
+            height: 40px;
+        }
+
+        input[type="checkbox"] {
+            width: 23px;
+            height: 23px;
+            accent-color: #66615B;
+            border-radius: 0.5rem;
+        }
+
+        .padding {
+            padding: 5px 15px;
+            margin-top: 10px;
+        }
+
+        .scroll {
+            overflow-x: auto;
+        }
+
+        #body3 .flex {
+            justify-content: flex-start;
+        }
+
+        .img-height {
+            height: 275px;
+            width: 100%;
+        }
+    </style>
+
+    <script src="https://kit.fontawesome.com/30e66505fc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main class="main-container">
+        <section class="content" id="body1">
+            <div class="box4">
+                <div class="flex pd-head">
+                    <div class="pd-lower">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor"
+                            class="bi bi-globe " viewBox="0 0 16 16">
+                            <path
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z" />
+                        </svg>
+                    </div>
+                    <div class="pd-lower">
+                        <p class="typography3 color2">Capacity</p>
+                        <h1 class="typography1">150GB</h1>
+                    </div>
+                </div>
+                <div class="pd-footer1 color2">
+                    <p class="border-top"></p>
+                    <p> <i class="fa-solid fa-rotate"></i> Update Now</p>
+                </div>
+                
+            </div>
+            <div class="box4">
+                <div class="flex pd-head">
+                    <div class="pd-lower">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor"
+                            class="bi bi-cash-coin" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0" />
+                            <path
+                                d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195z" />
+                            <path
+                                d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083q.088-.517.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z" />
+                            <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 6 6 0 0 1 3.13-1.567" />
+                        </svg>
+                    </div>
+                    <div class="pd-lower">
+                        <p class="typography3 color2">Revenue</p>
+                        <h1 class="typography1">$1,345</h1>
+                    </div>
+                </div>
+                <div class="pd-footer1 color2">
+                    <p class="border-top"></p>
+                    <p> <i class="fa-regular fa-calendar"></i> Last Day</p>
+                </div>
+            </div>
+            <div class="box4">
+                <div class="flex pd-head">
+                    <div class="pd-lower"><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42"
+                            fill="currentColor" class="bi bi-bezier" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z" />
+                            <path
+                                d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.52 6.52 0 0 0 1.814 9H2.5q.186 0 .358.043a5.52 5.52 0 0 1 3.185-3.185A1.5 1.5 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.52 6.52 0 0 1 2.72 3.5H13.5q-.185 0-.358.043a5.52 5.52 0 0 0-3.185-3.185" />
+                        </svg>
+                    </div>
+                    <div class="pd-lower">
+                        <p class="typography3 color2">Error</p>
+                        <h1 class="typography1">23</h1>
+                    </div>
+                </div>
+                <div class="pd-footer1 color2">
+                    <p class="border-top"></p>
+                    <p> <i class="fa-regular fa-clock"></i> In the last hour</p>
+                </div>
+            </div>
+            <div class="box4">
+                <div class="flex pd-head">
+                    <div class="pd-lower">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor"
+                            class="bi bi-heart" viewBox="0 0 16 16">
+                            <path
+                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                        </svg>
+                    </div>
+                    <div class="pd-lower">
+                        <p class="typography3 color2">Followers</p>
+                        <h1 class="typography1">+45K</h1>
+                    </div>
+                </div>
+                <div class="pd-footer1 color2">
+                    <p class="border-top"></p>
+                    <p> <i class="fa-solid fa-rotate"></i> Update Now</p>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <section class="content" id="body2">
+            <div class="box3">
+                <div class="flex pd-head">
+                    <div>
+                        <h1 class="typography1 color1">$34,657</h1>
+                    </div>
+                    <div class="typography5"><span class="secondary bd-rd1 color3">+18%</span></div>
+                </div>
+                <div class="pd-mid">
+                    <h3 class="typography4 color1">TOTAL EARNINGS IN LAST TEN QUAETERS</h3>
+                    <img src="14.png" alt="" class="width">
+                </div>
+
+                <div class="pd-footer2">
+                    <p class="border-top"></p>
+                    <div class="flex">
+                        <div class="color1">
+                            Financial Statistics
+                        </div>
+                        <div class="secondary color3 bd-rd2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-plus" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box3">
+                <div class="flex pd-head">
+                    <div>
+                        <h1 class="typography1 color1">169</h1>
+                    </div>
+                    <div class="typography5"><span class="primary bd-rd1 color3">-14%</span></div>
+                </div>
+                <div class="pd-mid">
+                    <h3 class="typography4 color1">TOTAL EARNINGS IN LAST TEN QUAETERS</h3>
+                    <img src="14.png" class="width">
+                </div>
+
+                <div class="pd-footer2">
+                    <p class="border-top"></p>
+                    <div class="flex">
+                        <div class="color1">
+                            View all Members
+                        </div>
+                        <div class="primary color3 bd-rd2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-play" viewBox="0 0 16 16">
+                                <path
+                                    d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box3">
+                <div class="flex pd-head">
+                    <div>
+                        <h1 class="typography1 color1">8,960</h1>
+                    </div>
+                    <div class="typography5"><span class="success bd-rd1 color3">-51%</span></div>
+                </div>
+                <div class="pd-mid">
+                    <h3 class="typography4 color1">TOTAL EARNINGS IN LAST TEN QUAETERS</h3>
+                    <img src="14.png" class="width">
+                </div>
+
+                <div class="pd-footer2">
+                    <p class="border-top"></p>
+                    <div class="flex">
+                        <div class="color1">
+                            View more details
+                        </div>
+                        <div class="success color3 bd-rd2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-info-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                <path
+                                    d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="content" id="body3">
+            <div class="box2">
+                <div class="pd-head">
+                    <p class="typography6">Global Sales by Top Locations</p>
+                    <p class="color2">All products that were shipped</p>
+                </div>
+                <div class="content pd-mid" id="gri">
+                    <div class="scroll">
+                        <table class="width collapse">
+                            <tbody>
+                                <tr>
+                                    <td><img src="https://demos.creative-tim.com/paper-dashboard-pro-angular/assets/img/flags/US.png"
+                                            alt=""></td>
+                                    <td> USA</td>
+                                    <td>2.920</td>
+                                    <td>53.23%</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="https://demos.creative-tim.com/paper-dashboard-pro-angular/assets/img/flags/DE.png"
+                                            alt=""></td>
+                                    <td> Germany</td>
+                                    <td>1.300 </td>
+                                    <td>20.43%</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="https://demos.creative-tim.com/paper-dashboard-pro-angular/assets/img/flags/AU.png"
+                                            alt=""></td>
+                                    <td> Australia</td>
+                                    <td>570</td>
+                                    <td>10.35%</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="https://demos.creative-tim.com/paper-dashboard-pro-angular/assets/img/flags/GB.png"
+                                            alt=""></td>
+                                    <td>United Kingdom</td>
+                                    <td>760 </td>
+                                    <td>7.87%</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="https://demos.creative-tim.com/paper-dashboard-pro-angular/assets/img/flags/RO.png"
+                                            alt=""></td>
+                                    <td>Romania</td>
+                                    <td>690 </td>
+                                    <td>5.94%</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="https://demos.creative-tim.com/paper-dashboard-pro-angular/assets/img/flags/BR.png"
+                                            alt=""></td>
+                                    <td> Brasil</td>
+                                    <td>600 </td>
+                                    <td>4.34%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <img src="17.png" class="img-height">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+
+        <section class="content" id="body4">
+            <div class="box22">
+                <div class="pd-head">
+                    <p class="typography6">Tasks</p>
+                    <p class="color2">Backend Development</p>
+                </div>
+                <div class="pd-mid">
+                    <div class="scroll">
+                        <table class="collapse">
+                            <tr>
+                                <td><input type="checkbox" checked></td>
+                                <td><img src="https://demos.creative-tim.com/paper-dashboard-pro-angular/assets/img/faces/ayo-ogunseinde-2.jpg"
+                                        class="size bd-rd2"></td>
+                                <td>
+                                    <p> Sign contract for "What are conference organizers afraid of?"</p>
+                                <td class="flex">
+                                    <span class="padding"><i class="fa-solid fa-pencil fa-xl"
+                                            style="color: #68C0DB;"></i></span>
+                                    <span class="padding"><i class="fa-solid fa-xmark fa-2xl"
+                                            style="color: #F28957;"></i></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td><img src="https://demos.creative-tim.com/paper-dashboard-pro-angular/assets/img/faces/erik-lucatero-2.jpg"
+                                        class="size bd-rd2"></td>
+                                <td>
+                                    <p>Lines From Great Russian Literature? Or E-mails From My Boss?</p>
+                                </td>
+                                <td class="flex">
+                                    <span class="padding"><i class="fa-solid fa-pencil fa-xl"
+                                            style="color: #68C0DB;"></i></span>
+                                    <span class="padding"><i class="fa-solid fa-xmark fa-2xl"
+                                            style="color: #F28957;"></i></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" checked></td>
+                                <td><img src="https://demos.creative-tim.com/paper-dashboard-pro-angular/assets/img/faces/kaci-baum-2.jpg"
+                                        class="size bd-rd2"></td>
+                                <td>
+                                    <p>Using dummy content or fake information in the Web design process can result in
+                                        products with unrealistic</p>
+                                </td>
+                                <td class="flex">
+                                    <span class="padding"><i class="fa-solid fa-pencil fa-xl"
+                                            style="color: #68C0DB;"></i></span>
+                                    <span class="padding"><i class="fa-solid fa-xmark fa-2xl"
+                                            style="color: #F28957;"></i></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td><img src="https://demos.creative-tim.com/paper-dashboard-pro-angular/assets/img/faces/joe-gardner-2.jpg"
+                                        class="size bd-rd2"></td>
+                                <td>
+                                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure</p>
+                                </td>
+                                <td class="flex">
+                                    <span class="padding"><i class="fa-solid fa-pencil fa-xl"
+                                            style="color: #68C0DB;"></i></span>
+                                    <span class="padding"><i class="fa-solid fa-xmark fa-2xl"
+                                            style="color: #F28957;"></i></span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="pd-footer1">
+                    <p class="border-top"></p>
+                    <p> <i class="fa-solid fa-rotate"></i> Updated 3 minutes ago</p>
+                </div>
+            </div>
+            <div class="box22" style="height: 500px;">
+                <div class="pd-head">
+                    <p class="typography6">2018 Sales</p>
+                    <p class="color2">All products including Taxes</p>
+                </div>
+                <div class="pd-mid">
+                    <img src="18.png" class="img-height">
+                </div>
+                <div class="pd-footer2">
+                    <p><i class="fa-solid fa-circle" style="color: #51BCDA;"></i> Tesla Model's <i
+                            class="fa-solid fa-circle" style="color: #EF8157;"></i> BMW 5 Series</p>
+                    <p class="border-top"></p>
+                    <p> <i class="fa-solid fa-check"></i> Data information certified</p>
+                </div>
+            </div>
+        </section>
+        <section class="content" id="body5">
+            <div class="box44">
+                <div class="pd-head">
+                    <h1 class="typography2 color1">Email Statistics</h1>
+
+                    <p class="color1">Last Campaign Performance</p>
+                </div>
+                <div class="pd-mid">
+                    <img src="15.png" class="img-height">
+                </div>
+                <div class="pd-footer2">
+                    <p class="color1">
+
+                        <i class="fa-solid fa-circle fa-xs" style="color: #51BCDA;"></i>
+
+                        Open
+                    </p>
+                    <p class="border-top"></p>
+                    <p class="color1"><i class="fa-regular fa-calendar-days"></i> Number of emails sent</p>
+                </div>
+            </div>
+            <div class="box44">
+                <div class="pd-head">
+                    <h1 class="typography2 color1">New Visitators</h1>
+
+                    <p class="color1">Out Of Total Number</p>
+                </div>
+                <div class="pd-mid">
+                    <img src="15.png" class="img-height">
+                </div>
+                <div class="pd-footer2">
+                    <p class="color1">
+                        <i class="fa-solid fa-circle fa-xs" style="color: #FCC468;"></i>
+                        Visited
+                    </p>
+                    <p class="border-top"></p>
+                    <p class="color1"><i class="fa-regular fa-calendar-days"></i> Campaign sent 2 days ago</p>
+                </div>
+            </div>
+            <div class="box44">
+                <div class="pd-head">
+                    <h1 class="typography2 color1">Orders</h1>
+
+                    <p class="color1">Total number</p>
+                </div>
+                <div class="pd-mid">
+                    <img src="15.png" class="img-height">
+                </div>
+                <div class="pd-footer2">
+                    <p class="color1">
+                        <i class="fa-solid fa-circle fa-xs" style="color: #EF8157;"></i>
+                        Completed
+                    </p>
+                    <p class="border-top"></p>
+                    <p class="color1"><i class="fa-regular fa-clock"></i> Updated 3 minutes ago</p>
+                </div>
+            </div>
+            <div class="box44">
+                <div class="pd-head">
+                    <h1 class="typography2 color1">Subscriptions</h1>
+
+                    <p class="color1">Our Users</p>
+                </div>
+                <div class="pd-mid">
+                    <img src="15.png" class="img-height">
+                </div>
+                <div class="pd-footer2">
+                    <p class="color1">
+                        <i class="fa-solid fa-circle fa-xs" style="color: #6C757D;"></i>
+                        Ended
+                    </p>
+                    <p class="border-top"></p>
+                    <p class="color1"><i class="fa-regular fa-calendar-days"></i> Total users</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

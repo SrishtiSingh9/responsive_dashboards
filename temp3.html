@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main-container {
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1rem;
+            display: grid;
+            height: 300px;
+        }
+        .box{
+            background-color: #F7F5F9;
+        }
+        #dashboard{
+            display: grid;
+            grid-template-columns: repeat(auto-fit ,minmax(400px,1fr));
+            gap:1rem;
+            grid-template-rows: 65% 30%;  
+        }
+        .value{
+             background-color: red;
+        }
+        #analytics{
+            display: grid;
+            grid-template-columns: repeat(auto-fit ,minmax(200px,1fr));
+            gap:1rem;
+        }
+        .last{
+            width: 49vw;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="main-container">
+        <div id="dashboard" class="box">
+            <div class="value"></div>
+            <div class="value"></div> 
+        </div>
+        <div id="analytics" class="box">
+            <div class="value"></div>
+            <div class="value"></div>
+            <div class="value"></div>
+            <div class="value"></div>
+            <div class="value"></div>
+            <div class="value"></div>
+            <div class="value last"></div>
+        </div>
+    </section>
+</body>
+
+</html>

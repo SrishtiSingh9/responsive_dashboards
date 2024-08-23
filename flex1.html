@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/30e66505fc.js" crossorigin="anonymous"></script>
+<style>
+    *,
+ul,
+*::after,
+*::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    background-color: #eaedf7;
+    color: #0e0e23;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+.flex {
+    display: flex;
+}
+.flex>*{
+    flex: 1 1 auto;
+}
+
+.bg-color1 {
+    background-color: white;
+}
+
+.bg-color2 {
+    background-color: #04A08B;
+}
+
+.bg-color3 {
+    background-color: #F0F3F6;
+}
+
+.bg-color4 {
+    background-color: #FF562F;
+}
+
+.bg-color5 {
+    background-color: #F6F9FB;
+}
+
+.color {
+    color: #F89B2B;
+}
+
+.color2 {
+    color: #58BF00;
+}
+
+.color3 {
+    color: #1c75bc;
+}
+
+.color4 {
+    color: #FF566B;
+}
+
+.color5 {
+    color: #55A692;
+}
+
+.color6 {
+    color: #00baff;
+}
+
+.color7 {
+    color: #04A08B;
+}
+
+.color8 {
+    color: #FF603B;
+}
+
+.color9 {
+    color: #7E8299;
+}
+
+.color11 {
+    color: #ffff;
+}
+
+.color13 {
+    color: #c6c6c6;
+}
+
+.typography1 {
+    font-size: 20px;
+}
+
+.typography2 {
+    font-size: 19px;
+}
+
+.typography3 {
+    font-size: 18px;
+}
+
+.typography8 {
+    font-size: 16px;
+}
+
+.hover,
+.hover1 {
+    transition: background-color 0.8s ease, box-shadow 0.8s ease;
+    /* Smooth transition */
+}
+
+.hover:hover {
+    background-color: #08961B;
+    cursor: pointer;
+    box-shadow: 1px 1px #08961B;
+}
+
+.hover1:hover {
+    background-color: #FB2F00;
+    cursor: pointer;
+    box-shadow: 1px 1px #FB2F00;
+}
+
+.typography4 {
+    font-size: 14px;
+}
+
+.typography5 {
+    font-size: 12px;
+}
+
+.typography6 {
+    font-size: 10px;
+}
+
+.typography7 {
+    font-size: 17.5px;
+}
+
+.bd-rd {
+    border-radius: 5px;
+}
+
+.padding {
+    padding: 21px;
+}
+
+.padding1 {
+    padding: 0px 5px;
+}
+
+.padding2 {
+    padding: 0px 1rem;
+}
+
+.padding3 {
+    padding: 10px 16px;
+}
+
+.padding4 {
+    padding: 0px 0px 10px;
+}
+
+.padding5 {
+    padding: 10px 0px 5px;
+}
+
+.padding6,
+table td {
+    padding: 14px;
+}
+
+.padding7 {
+    padding-bottom: 15px;
+}
+
+.padding8 {
+    padding: 35px 0px 5px;
+}
+
+.padding9 {
+    padding: 6px 10px;
+}
+
+.padding15 {
+    padding-right: 1rem;
+}
+
+.padding10 {
+    padding: 20px 20px 0px;
+}
+.padding12 {
+    padding: 8.75px 17.5px;
+}
+.w-40{
+    width: 40%;
+}
+.w-60{
+    width: 60%;
+}
+
+.padding13 {
+    padding: 6px 10px 7px;
+}
+
+.padding14 {
+    padding: 0px 21px 21px;
+}
+
+.mg-bt1 {
+    margin: 0px 0px 20px;
+}
+
+.mg-bt2 {
+    margin: 0px 0px 14px;
+}
+
+.mg-bt3 {
+    margin: 0px 5px 10px 0px;
+}
+
+.mg-bt4 {
+    margin: 0px 0px 10px;
+}
+
+.mg-bt5 {
+    margin: 10px 0px;
+}
+.overfl{
+    overflow-x: scroll;
+}
+.mg-bt6 {
+    margin: 25px 0px 0px;
+}
+
+.mg-bt7 {
+    margin-top: 10px;
+}
+.mg-bt8{
+    margin-right: 1rem;
+}
+.col {
+    flex-direction: column;
+}
+
+li {
+    list-style: none;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.text-align1 {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.border-bottom {
+    border-bottom: 1.5px solid #eaedef;
+}
+
+table td {
+    border-bottom: 1px solid #E6E9EC;
+}
+
+table {
+    border-collapse: collapse;
+    border-width: 0px;
+}
+
+#Amount .border-bottom:hover {
+    border-color: #4D7CFF;
+    cursor: pointer;
+}
+
+.noborder {
+    border: none;
+}
+
+.left-bd {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.right-bd {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.padding14 {
+    padding: 5px 10px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.input-container input {
+    flex: 1;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+.input-container input:focus {
+    border: 1px solid #0d6efd;
+}
+.input-container input[type='text']{
+    flex: 1;
+    min-width: 0;
+}
+.fle {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.flex-start {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@media(max-width:1199px) {
+    .flex {
+        flex-direction: column;
+    }
+    #w-100{
+        width: 100%;
+    }
+}
+@media (max-width:394px){
+    
+}
+
+.marquee-wrapper {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.marquee {
+    display: flex;
+    white-space: nowrap;
+    width: 200%;
+    animation: marquee 15s linear infinite;
+}
+
+.marquee-content {
+    display: flex;
+}
+
+.marquee p {
+    white-space: nowrap;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+        
+    }
+
+    100% {
+        transform: translateX(-50%);
+
+    }
+}
+</style>
+
+    <title>
+        FlexBox Template 01
+    </title>
+</head>
+
+<body>
+    <main class="padding10">
+        <section class="flex">
+            <div class="flex col">
+                <div class="bg-color1 bd-rd mg-bt8" id="Amount">
+                    <ul>
+                        <li class="padding12 w-100 text-align1 border-bottom typography2">BUY</li>
+                        <li class="padding12 w-100 text-align1 border-bottom typography2">SELL</li>
+                    </ul>
+                    <div class="padding w-100">
+                        <p class="typography4 mg-bt5 color10">Amount</p>
+                        <div class="input-container">
+                            <span class="padding9 bg-color3 left-bd">MAX</span>
+                            <input type="text" class="bg-color5 noborder padding13" placeholder="0.00">
+                            <span class="padding9 bg-color3 right-bd">BTC</span>
+                        </div>
+                        <p class="typography4 mg-bt5 color10">Limit Price</p>
+                        <div class="input-container"><input type="text" class="bg-color5 noborder padding13 left-bd"
+                                placeholder="3917.55"><span class="padding9 bg-color3 right-bd">USDC</span>
+                        </div>
+
+                        <div class="color9">
+                            <div class="fle padding8 typography3">
+                                <h5 class="mg-bt4">Fee*</h5>
+                                <h5 class="mg-bt4">0.000000 USDC</h5>
+                            </div>
+                            <div class="fle padding7 typography3">
+                                <h5 class="mg-bt4">Total*</h5>
+                                <h5 class="mg-bt4">0.000000 USDC</h5>
+                            </div>
+                        </div>
+                        <button class="w-100 noborder padding3 bg-color2 color11 bd-rd hover">
+                            PLACE ORDER
+                        </button>
+                    </div>
+                </div><br>
+                <div class="bg-color1 bd-rd mg-bt8">
+                    <div class="padding typography3 border-bottom">
+                        <p>
+                            Time & Sales
+                        </p>
+                    </div>
+                    <div class="padding14 overfl">
+                        <table class="w-100 typography4">
+                            <tr class="bold color10">
+                                <td>Time (UTC)</td>
+                                <td>Price</td>
+                                <td>Size</td>
+                            </tr>
+                            <tr>
+                                <td>10:26:41:119</td>
+                                <td class="color7">0.00000001234</td>
+                                <td>7845</td>
+                            </tr>
+                            <tr>
+                                <td>10:01:12.121</td>
+                                <td class="color4">0.00000009853</td>
+                                <td>8459</td>
+                            </tr>
+                            <tr>
+                                <td>10:26:41:119</td>
+                                <td class="color7">0.00000001234</td>
+                                <td>7845</td>
+                            </tr>
+                            <tr>
+                                <td>10:01:12.121</td>
+                                <td class="color7">0.00000009853</td>
+                                <td>8459</td>
+                            </tr>
+
+                            <tr>
+                                <td>10:26:41:119</td>
+                                <td class="color4">0.00000001234</td>
+                                <td>7845</td>
+                            </tr>
+                            <tr>
+                                <td>10:01:12.121</td>
+                                <td class="color4">0.00000009853</td>
+                                <td>8459</td>
+                            </tr>
+
+                            <tr>
+                                <td>10:26:41:119</td>
+                                <td class="color4">0.00000001234</td>
+                                <td>7845</td>
+                            </tr>
+                            <tr>
+                                <td>10:01:12.121</td>
+                                <td class="color7">0.00000009853</td>
+                                <td>8459</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div><br>
+                <div class="bg-color1 bd-rd mg-bt8">
+                    <div class="padding border-bottom">
+                        <h3 class="typography3">
+                            Wallet Balance
+                        </h3>
+                    </div>
+                    <div class="padding">
+                        <div class="fle color9 border-bottom typography7">
+                            <h5 class="mg-bt4">Asset</h5>
+                            <h5 class="mg-bt4">Amount</h5>
+                        </div>
+                        <div class="fle padding5 typography3">
+                            <h4>USDC</h4>
+                            <h4>0.00</h4>
+                        </div>
+                        <div class="fle padding4 typography3">
+                            <h4>BTC</h4>
+                            <h4>0.000000</h4>
+                        </div>
+                        <div class="fle">
+                            <button class="padding3 bg-color4 color11 noborder bd-rd hover1"> <i
+                                    class="fa-solid fa-circle-down" style="color: #ffffff;"></i> DEPOSIT</button>
+                            <button class="padding3 bg-color2 color11 noborder bd-rd hover"><i
+                                    class="fa-solid fa-circle-down" style="color: #ffffff;"></i> WITHDRAW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div> <br>
+
+            <div class="flex col w-60" id="w-100">
+                <div class="bg-color1 bd-rd mg-bt8">
+                    <div class="padding border-bottom">
+                        <h4 class="typography3">BCN/BTC</h4>
+                    </div>
+                    <div class="padding">
+                        <img src="" alt="NA">
+                    </div>
+                </div><br>
+                <div class="bg-color1 bd-rd mg-bt8">
+                    <div class="padding border-bottom">
+                        <h4 class="typography3">Trading Platform</h4>
+                    </div>
+                    <div class="padding">
+                        <img src="" alt="NA">
+                    </div>
+                </div>
+            </div>
+        </section><br>
+        <section>
+            <div class="flex bg-color1 bd-rd padding marquee-wrapper mg-bt8">
+                <div class="marquee">
+                    <div class="marquee-content">
+                        <ul>
+                            <li>
+                                <div class="padding2 text-align1">
+                                    <div class="fle mg-bt4">
+                                        <h6 class="typography8 color13">XRP|BTC</h6>
+                                        <h6 class="typography8 color4">-0.50%</h6>
+                                    </div>
+                                    <div>
+                                        <H3 class="typography3 mg-bt4">0.2974 <span class="color13">USD</span></H3>
+                                        <P class="typography6 mg-bt4">
+                                            <span class="color13">Volume</span>
+                                            <span class="bold">12,345</span>
+                                            <span class="bold color13">BTC</span>
+                                        </P>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="padding2 text-align1">
+                                    <div class="fle mg-bt4">
+                                        <h6 class="typography8 color13">XRP|BTC</h6>
+                                        <h6 class="typography8 color7">-0.50%</h6>
+                                    </div>
+                                    <div>
+                                        <H3 class="typography3 mg-bt4">0.2974 <span class="color13">USD</span></H3>
+                                        <P class="typography6 mg-bt4">
+                                            <span class="color13">Volume</span>
+                                            <span class="bold">12,345</span>
+                                            <span class="bold color13">BTC</span>
+                                        </P>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="padding2 text-align1">
+                                    <div class="fle mg-bt4">
+                                        <h6 class="typography8 color13">XRP|BTC</h6>
+                                        <h6 class="typography8 color4">-0.50%</h6>
+                                    </div>
+                                    <div>
+                                        <H3 class="typography3 mg-bt4">0.2974 <span class="color13">USD</span></H3>
+                                        <P class="typography6 mg-bt4">
+                                            <span class="color13">Volume</span>
+                                            <span class="bold">12,345</span>
+                                            <span class="bold color13">BTC</span>
+                                        </P>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="padding2 text-align1">
+                                    <div class="fle mg-bt4">
+                                        <h6 class="typography8 color13">XRP|BTC</h6>
+                                        <h6 class="typography8 color7">-0.50%</h6>
+                                    </div>
+                                    <div>
+                                        <H3 class="typography3 mg-bt4">0.2974 <span class="color13">USD</span></H3>
+                                        <P class="typography6 mg-bt4">
+                                            <span class="color13">Volume</span>
+                                            <span class="bold">12,345</span>
+                                            <span class="bold color13">BTC</span>
+                                        </P>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="padding2 text-align1">
+                                    <div class="fle mg-bt4">
+                                        <h6 class="typography8 color13">XRP|BTC</h6>
+                                        <h6 class="typography8 color4">-0.50%</h6>
+                                    </div>
+                                    <div>
+                                        <H3 class="typography3 mg-bt4">0.2974 <span class="color13">USD</span></H3>
+                                        <P class="typography6 mg-bt4">
+                                            <span class="color13">Volume</span>
+                                            <span class="bold">12,345</span>
+                                            <span class="bold color13">BTC</span>
+                                        </P>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="padding2 text-align1">
+                                    <div class="fle mg-bt4">
+                                        <h6 class="typography8 color13">XRP|BTC</h6>
+                                        <h6 class="typography8 color7">-0.50%</h6>
+                                    </div>
+                                    <div>
+                                        <H3 class="typography3 mg-bt4">0.2974 <span class="color13">USD</span></H3>
+                                        <P class="typography6 mg-bt4">
+                                            <span class="color13">Volume</span>
+                                            <span class="bold">12,345</span>
+                                            <span class="bold color13">BTC</span>
+                                        </P>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="padding2 text-align1">
+                                    <div class="fle mg-bt4">
+                                        <h6 class="typography8 color13">XRP|BTC</h6>
+                                        <h6 class="typography8 color4">-0.50%</h6>
+                                    </div>
+                                    <div>
+                                        <H3 class="typography3 mg-bt4">0.2974 <span class="color13">USD</span></H3>
+                                        <P class="typography6 mg-bt4">
+                                            <span class="color13">Volume</span>
+                                            <span class="bold">12,345</span>
+                                            <span class="bold color13">BTC</span>
+                                        </P>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="padding2 text-align1">
+                                    <div class="fle mg-bt4">
+                                        <h6 class="typography8 color13">XRP|BTC</h6>
+                                        <h6 class="typography8 color7">-0.50%</h6>
+                                    </div>
+                                    <div>
+                                        <H3 class="typography3 mg-bt4">0.2974 <span class="color13">USD</span></H3>
+                                        <P class="typography6 mg-bt4">
+                                            <span class="color13">Volume</span>
+                                            <span class="bold">12,345</span>
+                                            <span class="bold color13">BTC</span>
+                                        </P>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="padding2 text-align1">
+                                    <div class="fle mg-bt4">
+                                        <h6 class="typography8 color13">XRP|BTC</h6>
+                                        <h6 class="typography8 color4">-0.50%</h6>
+                                    </div>
+                                    <div>
+                                        <H3 class="typography3 mg-bt4">0.2974 <span class="color13">USD</span></H3>
+                                        <P class="typography6 mg-bt4">
+                                            <span class="color13">Volume</span>
+                                            <span class="bold">12,345</span>
+                                            <span class="bold color13">BTC</span>
+                                        </P>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="padding2 text-align1">
+                                    <div class="fle mg-bt4">
+                                        <h6 class="typography8 color13">XRP|BTC</h6>
+                                        <h6 class="typography8 color7">-0.50%</h6>
+                                    </div>
+                                    <div>
+                                        <H3 class="typography3 mg-bt4">0.2974 <span class="color13">USD</span></H3>
+                                        <P class="typography6 mg-bt4">
+                                            <span class="color13">Volume</span>
+                                            <span class="bold">12,345</span>
+                                            <span class="bold color13">BTC</span>
+                                        </P>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="padding2 text-align1">
+                                    <div class="fle mg-bt4">
+                                        <h6 class="typography8 color13">XRP|BTC</h6>
+                                        <h6 class="typography8 color4">-0.50%</h6>
+                                    </div>
+                                    <div>
+                                        <H3 class="typography3 mg-bt4">0.2974 <span class="color13">USD</span></H3>
+                                        <P class="typography6 mg-bt4">
+                                            <span class="color13">Volume</span>
+                                            <span class="bold">12,345</span>
+                                            <span class="bold color13">BTC</span>
+                                        </P>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="padding2 text-align1">
+                                    <div class="fle mg-bt4">
+                                        <h6 class="typography8 color13">XRP|BTC</h6>
+                                        <h6 class="typography8 color7">-0.50%</h6>
+                                    </div>
+                                    <div>
+                                        <H3 class="typography3 mg-bt4">0.2974 <span class="color13">USD</span></H3>
+                                        <P class="typography6 mg-bt4">
+                                            <span class="color13">Volume</span>
+                                            <span class="bold">12,345</span>
+                                            <span class="bold color13">BTC</span>
+                                        </P>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section><br>
+        <section class=" flex">
+            <div class="bg-color1 bd-rd mg-bt8">
+                <div class="padding border-bottom">
+                    <h4 class="typography3">Overview</h4>
+                </div>
+                <div class="padding">
+                    <img src="" alt="NA">
+                </div>
+            </div><br>
+            <div class="bg-color1 bd-rd mg-bt8">
+                <div class="padding border-bottom">
+                    <h4 class="typography3">Daily Market</h4>
+                </div>
+                <div class="padding">
+                    <img src="" alt="NA">
+                </div>
+
+            </div>
+        </section><br>
+        <section class="flex">
+            <div class="bg-color1 bd-rd padding mg-bt2 mg-bt8">
+                <div class="fle flex-start">
+                    <i class="fa-brands fa-bitcoin fa-rotate-by fa-2xl padding15"
+                        style="color: #f7931a; --fa-rotate-angle: -15deg;"></i>
+                    <h2 class="typography1 mg-bt7">Bitcoin</h2>
+                </div>
+                <div class="fle mg-bt6">
+                    <h6 class="typography8">BTC <span class="color6">$54,768.90</span></h6>
+                    <h6><span class="typography4 color7">+5.35%</span></h6>
+                </div>
+            </div>
+
+            <div class="bg-color1 bd-rd padding mg-bt2 mg-bt8">
+                <div class="fle flex-start">
+
+                    <i class="fa-solid fa-litecoin-sign fa-xl padding15"></i>
+                    <h2 class="typography1 mg-bt7">Bitcoin</h2>
+                </div>
+                <div class="fle mg-bt6">
+                    <h6 class="typography8">BTC <span class="color6">$54,768.90</span></h6>
+                    <h6><span class="typography4 color8">+5.35%</span></h6>
+                </div>
+            </div>
+
+
+            <div class="bg-color1 bd-rd padding mg-bt2 mg-bt8">
+                <div class="fle flex-start">
+                    <i class="fa-brands fa-neos fa-rotate-by fa-2xl padding15" style="color: #58bf00;"></i>
+                    <h2 class="typography1 mg-bt7">Bitcoin</h2>
+                </div>
+                <div class="fle mg-bt6">
+                    <h6 class="typography8">BTC <span class="color6">$54,768.90</span></h6>
+                    <h6><span class="typography4 color7">+5.35%</span></h6>
+                </div>
+            </div>
+
+
+            <div class="bg-color1 bd-rd padding mg-bt2 mg-bt8">
+                <div class="fle flex-start">
+                    <i class="fa-brands fa-dashcube fa-2xl padding15" style="color: #1c75bc;"></i>
+                    <h2 class="typography1 mg-bt7">Bitcoin</h2>
+                </div>
+                <div class="fle mg-bt6">
+                    <h6 class="typography8">BTC <span class="color6">$54,768.90</span></h6>
+                    <h6><span class="typography4 color8">+5.35%</span></h6>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

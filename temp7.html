@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp7</title>
+    <style>
+        /* Template 7 is same as template 9*/
+        body {
+            margin: 10px;
+        }
+
+        #main-container {
+            display: grid;
+            gap: 1rem;
+        }
+
+        #upper {
+            display: grid;
+            height: 350px;
+            grid-template-columns: repeat(auto-fit, minmax(900px, 1fr));
+            gap: 1rem;
+        }
+
+        #left {
+            background-color: rebeccapurple;
+        }
+        .box2,
+        .box3 {
+            background-color: aliceblue;
+        }
+        #right {
+            display: grid;
+            gap: 1rem;
+        }
+        .top {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(348px, 1fr));
+            gap: 1rem;
+        }
+        .low {
+            display: grid;
+            grid-template-columns: 100%;
+        }
+        #lower {
+            display: grid;
+            height: 350px;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        }
+        .box5 {
+            background-color: red;
+        }
+        #middle {
+            display: grid;
+            grid-template-columns: 35% 64%;
+            height: 350px;
+            gap: 1rem;
+        }
+        .box4 {
+            background-color: rosybrown;
+        }
+
+        @media (max-width:1199px) {
+            .top {
+                grid-template-columns: 100%;
+            }
+
+            #middle {
+                grid-template-columns: 100%;
+            }
+        }
+        @media(min-width:1600px) {
+            #upper {
+                grid-template-columns: 35% 64%;
+            }
+            .top {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (max-width:1599px) {
+            .item-1 {
+                grid-row: 2;
+                width: 100%;
+            }
+            .item-2 {
+                width: 100%;
+                grid-row: 1;
+            }
+        }
+        @media (max-width:1399px){
+            
+            .part3 {
+                grid-column: 1/span 2;
+            }
+            .part2,
+            .part1{
+                grid-row: 2;
+            }
+        }
+        @media(max-width:991px){
+            .part2{
+                grid-area: 2/1/span 1/ span 2;
+            }
+            .part1{
+                grid-area: 3/1/span 1/ span 2; 
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <main id="main-container">
+        <section id="upper">
+            <div id="left" class="item-1">
+                <div class="box1"></div>
+            </div>
+            <div id="right" class="item-2">
+                <section class="top">
+                    <div class="box2"></div>
+                    <div class="box2"></div>
+                    <div class="box2"></div>
+                </section>
+                <section class="low">
+                    <div class="box3"></div>
+                </section>
+            </div>
+        </section>
+        <section id="middle">
+            <div class="box4"></div>
+            <div class="box4"></div>
+        </section>
+        <section id="lower">
+            <div class="box5 part1">BOX1</div>
+            <div class="box5 part2">BOX2</div>
+            <div class="box5 part3">BOX3</div>
+        </section>
+    </main>
+
+</body>
+
+</html>

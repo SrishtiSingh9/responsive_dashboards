@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/30e66505fc.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>temp9</title>
+    <style>
+        .upper {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px 2px #E9EDF0;
+            height: 100px;
+        }
+
+        h4,
+        h5 {
+            margin: 0px;
+            padding: 10px;
+            font-weight: normal;
+        }
+
+        .project {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            font-size: 15px;
+        }
+
+        .number {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .icon {
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .values {
+            font-size: 12px;
+            color: #ed5e7d;
+            background-color: #FCE7E7;
+            border-radius: 5px;
+            width: 85px;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        #one1 {
+            background-color: #E8EFFB;
+        }
+
+        #three3 {
+            background-color: #E5F6FB;
+        }
+
+        .gray {
+            color: #495057;
+        }
+
+        #two2 {
+            background-color: #FCF5E5;
+        }
+
+        .posi {
+            color: #13C56B;
+            background-color: #DCF6E9;
+        }
+
+        #subbox2 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .Overview {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .over {
+            padding: 5px;
+            background-color: #EDE7FB;
+            color: #8695EC;
+            border-radius: 5px;
+        }
+
+        .over:hover {
+            background-color: #865CE2;
+            color: white;
+        }
+
+        body {
+            background-color: #F3F6F9;
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        main {
+            margin: 15px;
+        }
+
+        #container,
+        #box1,
+        #box2,
+        #box3,
+        .part1,
+        #subbox1 {
+            display: grid;
+            gap: 1rem;
+        }
+
+        #box1 {
+            grid-template-columns: 66% 33%;
+        }
+
+        #box2 {
+            grid-template-columns: 60% 39%;
+        }
+
+        #box3 {
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        }
+
+        #subbox1 {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .upper,
+        #subbox2 {
+            background-color: white;
+        }
+        .part3{
+            box-shadow: 2px 2px 2px 2px #E9EDF0;
+        }
+
+        @media (max-width:1599px) {
+            #box1 {
+                grid-template-columns: repeat(auto-fit, minmax(790px, 1fr));
+            }
+        }
+
+        @media (min-width:991px) and (max-width:1399px) {
+            #one {
+                grid-row: 1;
+                grid-column: 1/span 2;
+            }
+
+            #two,
+            #three {
+                grid-row: 2;
+
+            }
+        }
+
+        @media (max-width:1199px) {
+            #box2 {
+                grid-template-columns: repeat(auto-fit, minmax(590px, 1fr));
+            }
+
+            #subbox1 {
+                grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+            }
+        }
+
+        @media(max-width:991px) {
+            #box3 {
+                grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main id="container">
+        <section id="box1">
+            <div class="part1">
+                <div id="subbox1">
+                    <div class="upper">
+                        <div class="icon" id="one1">
+                            <i class="fa-solid fa-suitcase" style="color:#6691E7;"></i>
+                        </div>
+                        <div class="project">
+                            <h5 class="gray">ACTIVE PROJECTS</h5>
+                            <div class="number">
+                                <h4>825</h4>
+                                <h5 class="values"><span><i class="fa-solid fa-chevron-down"
+                                            style="color: #ed5e7d;"></i></span> 5.02%</h5>
+                            </div>
+                            <h5 class="gray">Project this month</h5>
+                        </div>
+                    </div>
+                    <div class="upper">
+                        <div class="icon" id="two2">
+                            <i class="fa-solid fa-award" style="color: #E8BC52;"></i>
+                        </div>
+                        <div class="project">
+                            <h5 class="gray">NEW LEADS</h5>
+                            <div class="number">
+                                <h4>7,522</h4>
+                                <h5 class="values posi"><span><i class="fa-solid fa-chevron-up"
+                                            style="color: #13C56B;"></i></span> 3.58%</h5>
+                            </div>
+                            <h5 class="gray">Leads this month</h5>
+                        </div>
+                    </div>
+                    <div class="upper">
+                        <div class="icon" id="three3">
+                            <i class="fa-regular fa-clock" style="color: #50C3E6;"></i>
+                        </div>
+                        <div class="project">
+                            <h5 class="gray">TOTAL LEADS</h5>
+                            <div class="number">
+                                <h4>168h 40m</h4>
+                                <h5 class="values"><span><i class="fa-solid fa-chevron-down"
+                                            style="color: #ed5e7d;"></i></span> 10.02%</h5>
+                            </div>
+                            <h5 class="gray">Work this month</h5>
+                        </div>
+                    </div>
+                </div>
+                <div id="subbox2" style="height: 500px;box-shadow: 2px 2px 2px 2px #E9EDF0;">
+                    <div class="Overview">
+                        <div>
+                            <h3 class="gray">Project Overview</h3>
+                        </div>
+                        <div>
+                            <span class="over">ALL</span>
+                            <span class="over">1M</span>
+                            <span class="over">6M</span>
+                            <span class="over">1Y</span>
+                        </div>
+                    </div>
+
+                    <div class="overvalue">
+                        <div class="col2">
+                            <div class="col4">
+                                <h5>9,851</h5>
+                                <p>Number of Projects</p>
+                            </div>
+                            <div class="col4">
+                                <h5>1,026</h5>
+                                <p>Active Projects</p>
+                            </div>
+                        </div>
+                        <div class="col2">
+                            <div class="col4">
+                                <h5>$228.89k</h5>
+                                <p>Revenue</p>
+                            </div>
+                            <div class="col4">
+                                <h5>10,589h</h5>
+                                <p>Working Hours</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div> <img src="3.png" style="width: 100%;height: 90%;"></div>
+                </div>
+                <style>
+                    .overvalue {
+                        display: flex;
+                        text-align: center;
+                        justify-content: flex-start;
+                    }
+
+                    .col4 p,
+                    .col4 h5 {
+                        padding: 0px;
+                    }
+
+                    .col2 {
+                        display: flex;
+                        justify-content: space-evenly;
+                        width: 50%;
+                    }
+
+                    #subbox2,
+                    .col4 {
+                        padding: 1rem;
+                        border-radius: 10px;
+                    }
+
+                    .Overview {
+                        border-bottom: 1px solid gainsboro;
+                    }
+
+                    .calender {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+
+                    #calender {
+                        background-color: white;
+                        border-radius: 10px;
+                        padding: 1rem;
+                        box-shadow: 2px 2px 2px 2px #E9EDF0;
+                    }
+
+                    .month {
+                        border-radius: 5px;
+                        padding: 5px;
+                        border-color: lightgray;
+                        color: gray;
+                    }
+
+                    .year {
+                        width: 50px;
+                        border: transparent;
+                        color: gray;
+                    }
+                </style>
+            </div>
+            <div class="part1" id="calender">
+                <div class="calender">
+                    <div>
+                        <h3 class="gray">Upcoming Schedules</h3>
+                    </div>
+                    <div>
+                        <span><select class="month">
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7" selected>July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </span>
+                        <span>
+                            <input type="number" min="1901" value="2024" class="year">
+                        </span>
+                    </div>
+                </div>
+                <style>
+                    table {
+                        border-collapse: collapse;
+                        width: 100%;
+                    }
+
+                    .show td {
+                        padding: 0.5rem;
+                        text-align: center;
+                    }
+
+                    .show .back {
+                        background-color: #F3F6F9;
+                    }
+
+                    .current {
+                        border: 1px solid #13c56b;
+                        background-color: #13C56B;
+                        color: white;
+
+                    }
+
+                    .show td:hover {
+                        background-color: #F3F6F9;
+                        border-radius: 5px;
+                    }
+
+                    .current:hover {
+                        color: #13C56B;
+                        background-color: #F3F6F9;
+
+                    }
+                </style>
+                <div class="show">
+                    <table>
+                        <tr class="back">
+                            <td>Sun</td>
+                            <td>Mon</td>
+                            <td>Tue</td>
+                            <td>Wed</td>
+                            <td>Thu</td>
+                            <td>Fri</td>
+                            <td>Sat</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td class="current">26</td>
+                            <td>27</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td class="gray">1</td>
+                            <td class="gray">2</td>
+                            <td class="gray">3</td>
+                            <td class="gray">4</td>
+                        </tr>
+                        <tr class="gray">
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                        </tr>
+                    </table>
+
+                </div>
+
+                <h4 class="gray">Events:</h4>
+                <div style="display: flex; justify-content: space-between;align-items: center;">
+                    <div class="eventinfo">
+                        <div class="date">09</div>
+                        <div class="company">
+                            <h4>Development planning</h4>
+                            <p>iTest Factory</p>
+                        </div>
+                    </div>
+                    <div>
+                        <small class="gray">9:20 AM</small>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: space-between;align-items: center;">
+                    <div class="eventinfo">
+                        <div class="date">09</div>
+                        <div class="company">
+                            <h4>Development planning</h4>
+                            <p>iTest Factory</p>
+                        </div>
+                    </div>
+                    <div>
+                        <small class="gray">9:20 AM</small>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: space-between;align-items: center;">
+                    <div class="eventinfo">
+                        <div class="date">09</div>
+                        <div class="company">
+                            <h4>Development planning</h4>
+                            <p>iTest Factory</p>
+                        </div>
+                    </div>
+                    <div>
+                        <small class="gray">9:20 AM</small>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: space-between;align-items: center;">
+                    <div class="eventinfo">
+                        <div class="date">09</div>
+                        <div class="company">
+                            <h4>Development planning</h4>
+                            <p>iTest Factory</p>
+                        </div>
+                    </div>
+                    <div>
+                        <small class="gray">9:20 AM</small>
+                    </div>
+                </div>
+                <h5 class="viewall"><a href="www.google.com" class="gray"> View all Events</a></h5>
+            </div>
+        </section>
+        <style>
+            .date {
+                background-color: #DCF6E9;
+                color: #13C57F;
+                text-align: center;
+                border-radius: 50%;
+                padding: 15px;
+                font-weight: bold;
+            }
+
+            .viewall {
+                text-align: center;
+            }
+
+            .eventinfo {
+                display: flex;
+                align-items: center;
+            }
+
+            .company h4 {
+                padding: 0px;
+            }
+
+            .company p {
+                font-size: small;
+                color: #878A99;
+                margin-top: 5px;
+            }
+
+            .date {
+                margin-right: 1rem;
+            }
+
+            .part2 {
+                padding: 1rem;
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 2px 2px 2px 2px #E9EDF0;
+            }
+
+            .export {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .export h5 {
+                background-color: #E5F6FB;
+                color: #50C3E7;
+                border-radius: 5px;
+            }
+
+            .export h5:hover {
+                background-color: #50C3E7;
+                color: white;
+            }
+
+            .activepro {
+                margin: 0px;
+            }
+
+            .activepro td,
+            .activepro th {
+                padding: 8px;
+            }
+
+            .activepro p {
+                margin: 2px;
+            }
+
+            .activepro .gray {
+                background-color: #F3F6F9;
+            }
+
+            .activepro tr {
+                border-bottom: 1px solid #E9EBEC;
+            }
+
+            #progressBar {
+                width: 40px;
+
+            }
+        </style>
+
+
+        <section id="box2">
+            <div class="part2">
+                <div class="export">
+                    <h3 class="gray">Active Project</h3>
+                    <h5>Export Report</h5>
+                </div>
+                <div>
+                    <table class="activepro">
+                        <tr class="gray">
+                            <th>Project Name</th>
+                            <th>Project Lead</th>
+                            <th>Progress</th>
+                            <th>Assignee</th>
+                            <th>Status</th>
+                            <th>Due Date</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Brand Logo Design</p>
+                            </td>
+                            <td>
+                                <div class="lead">
+                                    <div><img
+                                            src="	https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-1.jpg">
+                                    </div>
+                                    <div> Donald Risher</div>
+                                </div>
+                            </td>
+                            <td>53% <progress id="progressBar" value="53" max="100"></progress></td>
+                            <td>
+                                <div class="img">
+                                    <img class="assignee"
+                                        src="	https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-1.jpg">
+                                    <img class="assignee two"
+                                        src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-2.jpg">
+                                    <img class="assignee three"
+                                        src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-3.jpg">
+                                </div>
+                            </td>
+                            <td><span class="status inprogress">Inprogress</span></td>
+                            <td>
+                                <p>06 Sep 2021</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>Brand Logo Design</p>
+                            </td>
+                            <td>
+                                <div class="lead">
+                                    <div><img
+                                            src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-2.jpg">
+                                    </div>
+                                    <div> Donald Risher</div>
+                                </div>
+                            </td>
+                            <td>64% <progress id="progressBar" value="64" max="100"></progress></td>
+                            <td>
+                                <div class="img">
+                                    <img class="assignee"
+                                        src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-5.jpg">
+                                    <img class="assignee two"
+                                        src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-3.jpg">
+
+                                </div>
+                            </td>
+                            <td><span class="status pending">Pending</span></td>
+                            <td>
+                                <p>06 Sep 2021</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>Brand Logo Design</p>
+                            </td>
+                            <td>
+                                <div class="lead">
+                                    <div><img
+                                            src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-3.jpg">
+                                    </div>
+                                    <div> Donald Risher</div>
+                                </div>
+                            </td>
+                            <td>0% <progress id="progressBar" value="0" max="100"></progress></td>
+                            <td>
+                                <div class="img">
+                                    <img class="assignee"
+                                        src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-6.jpg">
+                                </div>
+                            </td>
+                            <td><span class="status completed">Completed</span></td>
+                            <td>
+                                <p>06 Sep 2021</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>Brand Logo Design</p>
+                            </td>
+                            <td>
+                                <div class="lead">
+                                    <div><img
+                                            src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-5.jpg">
+                                    </div>
+                                    <div> Donald Risher</div>
+                                </div>
+                            </td>
+                            <td>77% <progress id="progressBar" value="77" max="100"></progress></td>
+                            <td>
+                                <div class="img">
+                                    <img class="assignee"
+                                        src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-3.jpg">
+                                    <img class="assignee two"
+                                        src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-5.jpg">
+                                </div>
+                            </td>
+                            <td><span class=" status inprogress">Progress</span></td>
+                            <td>
+                                <p>06 Sep 2021</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>Brand Logo Design</p>
+                            </td>
+                            <td>
+                                <div class="lead">
+                                    <div><img
+                                            src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-6.jpg">
+                                    </div>
+                                    <div> Donald Risher</div>
+                                </div>
+                            </td>
+                            <td>100%<progress id="progressBar" value="100" max="100"></progress></td>
+                            <td>
+                                <div class="img">
+                                    <img class="assignee"
+                                        src="	https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-1.jpg">
+                                    <img class="assignee two"
+                                        src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-6.jpg">
+                                    <img class="assignee three"
+                                        src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-2.jpg">
+                                </div>
+                            </td>
+                            <td><span class="status inprogress">Progress</span></td>
+                            <td>
+                                <p>21 Dec 2021</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div><br>
+                <div class="search gray">
+                    <div>
+                        <p>Showing <b>5</b> of <b>25</b> Results</p>
+                    </div>
+                    <div>
+                        <span class="value"><i class="fa-solid fa-arrow-left"></i></span>
+                        <span class="value ho">1</span>
+                        <span class="value"
+                            style="color: white;background-color: #6691E7;border-color: #6691E7;">2</span>
+                        <span class="value ho">3</span>
+                        <span class="value"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .search {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .ho:hover {
+                    background-color: lightgray;
+                }
+
+                .value {
+                    color: #669FED;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    border-radius: 5px;
+                    border: 1px solid #E2E5ED;
+                    cursor: pointer;
+                }
+
+                .img {
+                    display: flex;
+                }
+
+                .status {
+                    padding: 5px;
+                    border-radius: 8px;
+                    font-weight: bold;
+                    font-size: small;
+                }
+
+                .completed {
+                    color: #13C56B;
+                    background-color: #DCF6E9;
+                }
+
+                .pending {
+                    background-color: #FCE7E7;
+                    color: #ED5E5E;
+                }
+
+                .inprogress {
+                    color: rgb(232, 188, 82);
+                    background-color: #FCF5E5;
+                }
+
+                th {
+                    text-align: left;
+                    background-color: #F3F6F9;
+                    padding: 10px;
+                    color: #878A99;
+                }
+
+                .lead {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .three {
+                    position: relative;
+                    left: -45px;
+
+                }
+
+                .two {
+                    position: relative;
+                    left: -20px;
+                }
+
+                .lead img,
+                .img img,
+                .taskvalue td img {
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    border: 3px solid white;
+
+                }
+
+                .task {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                .task select {
+                    border: none;
+                    color: #878A99;
+                }
+
+                .taskvalue {
+                    width: 100%;
+                }
+
+                .taskvalue th {
+                    padding: 10px;
+                }
+
+                .taskvalue .gray {
+                    background-color: #F3F6F9;
+                    margin: 0px;
+                }
+            </style>
+
+
+            <div class="part2">
+                <div class="task">
+                    <h3 class="gray">My Tasks</h3>
+                    <h4><select>
+                            <option>All Tasks</option>
+                            <option>Completed</option>
+                            <option>Inprogress</option>
+                            <option>Pending</option>
+                        </select>
+                    </h4>
+                </div>
+
+                <div>
+                    <table class="taskvalue">
+                        <tr class="gray">
+                            <th>Name</th>
+                            <th>Dedline</th>
+                            <th>Status</th>
+                            <th>Assignee</th>
+                        </tr>
+                        <style>
+                            input.large {
+                                width: 18px;
+                                border-radius: 15px;
+                                border-color: #D8DDE2;
+                            }
+                        </style>
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <input type="checkbox" class="large">
+                                    <h4>Create new Admin Template</h4>
+                                </div>
+                            </td>
+                            <td>
+                                <p>03 Nov 2021</p>
+                            </td>
+                            <td>
+                                <span class="status inprogress">Progress</span>
+                            </td>
+                            <td>
+                                <img src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-2.jpg"
+                                    alt="" style="height: 30px;width: 30px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <input type="checkbox" class="large">
+                                    <h4>Create new Admin Template</h4>
+                                </div>
+                            </td>
+                            <td>
+                                <p>03 Nov 2021</p>
+                            </td>
+                            <td>
+                                <span class="status inprogress">Progress</span>
+                            </td>
+                            <td>
+                                <img src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-2.jpg"
+                                    alt="" style="height: 30px;width: 30px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <input type="checkbox" class="large">
+                                    <h4>Create new Admin Template</h4>
+                                </div>
+                            </td>
+                            <td>
+                                <p>03 Nov 2021</p>
+                            </td>
+                            <td>
+                                <span class="status completed">Completed</span>
+                            </td>
+                            <td>
+                                <img src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-2.jpg"
+                                    alt="" style="height: 30px;width: 30px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <input type="checkbox" class="large">
+                                    <h4>Create new Admin Template</h4>
+                                </div>
+                            </td>
+                            <td>
+                                <p>03 Nov 2021</p>
+                            </td>
+                            <td>
+                                <span class="status completed">Completed</span>
+                            </td>
+                            <td>
+                                <img src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-2.jpg"
+                                    alt="" style="height: 30px;width: 30px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <input type="checkbox" class="large">
+                                    <h4>Create new Admin Template</h4>
+                                </div>
+                            </td>
+                            <td>
+                                <p>03 Nov 2021</p>
+                            </td>
+                            <td>
+                                <span class="status inprogress">Progress</span>
+                            </td>
+                            <td>
+                                <img src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-2.jpg"
+                                    alt="" style="height: 30px;width: 30px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <input type="checkbox" class="large">
+                                    <h4>Create new Admin Template</h4>
+                                </div>
+                            </td>
+                            <td>
+                                <p>03 Nov 2021</p>
+                            </td>
+                            <td>
+                                <span class="status inprogress">Progress</span>
+                            </td>
+                            <td>
+                                <img src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-2.jpg"
+                                    alt="" style="height: 30px;width: 30px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <input type="checkbox" class="large">
+                                    <h4>Create new Admin Template</h4>
+                                </div>
+                            </td>
+                            <td>
+                                <p>03 Nov 2021</p>
+                            </td>
+                            <td>
+                                <span class="status pending">Pending</span>
+                            </td>
+                            <td>
+                                <img src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-2.jpg"
+                                    alt="" style="height: 30px;width: 30px;">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <h5 class="viewall"><a href="www.google.com" class="gray">load More </a></h5>
+
+                </div>
+                <style>
+                    .checkbox {
+                        display: flex;
+                    }
+                </style>
+            </div>
+        </section>
+        <style>
+            #one,
+            #two {
+                background-color: white;
+                padding: 15px;
+                border-radius: 10px;
+            }
+        </style>
+
+
+        <section id="box3">
+            <div class="part3" id="one">
+                <div class="task">
+                    <h3 class="gray">Team Members</h3>
+                    <h5><b>SORT BY : </b><select>
+                            <option>Today</option>
+                            <option>Yesterday</option>
+                            <option>Last 7 Days</option>
+                            <option selected>Last 30 Days</option>
+                            <option>This Month</option>
+                            <option>Last Month</option>
+                        </select></h5>
+                </div>
+
+                <div>
+                    <table id="member">
+                        <tr>
+                            <th>Member</th>
+                            <th>Hours</th>
+                            <th>Tasks</th>
+                            <th>Status</th>
+                        </tr>
+                        <style>
+                            #member td {
+                                padding: 10px;
+                            }
+
+                            p {
+                                margin: 0px;
+                            }
+
+                            .member {
+                                display: flex;
+                                align-items: center;
+                            }
+
+                            .member img {
+                                height: 35px;
+                                width: 35px;
+                                border-radius: 5px;
+                                margin-right: 10px;
+                            }
+
+                            .member h4 {
+                                margin: 0px;
+                                padding: 0px;
+                            }
+                        </style>
+                        <tr>
+                            <td class="member">
+                                <div>
+                                    <img
+                                        src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-1.jpg">
+                                </div>
+                                <div>
+                                    <h4>Donald Risher</h4>
+                                    <small class="gray">Product Manager</small>
+                                </div>
+                            </td>
+                            <td>
+                                <p>83h : <span class="gray">150h</span></p>
+                            </td>
+                            <td>
+                                <p>105</p>
+                            </td>
+                            <td><i class="fa-solid fa-circle-notch fa-2xl" style="color:#7A9EE8 ;"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="member">
+                                <div>
+                                    <img
+                                        src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-1.jpg">
+                                </div>
+                                <div>
+                                    <h4>Donald Risher</h4>
+                                    <small class="gray">Product Manager</small>
+                                </div>
+                            </td>
+                            <td>
+                                <p>83h : <span class="gray">150h</span></p>
+                            </td>
+                            <td>
+                                <p>105</p>
+                            </td>
+                            <td><i class="fa-solid fa-circle-notch fa-2xl" style="color:#7A9EE8 ;"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="member">
+                                <div>
+                                    <img
+                                        src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-1.jpg">
+                                </div>
+                                <div>
+                                    <h4>Donald Risher</h4>
+                                    <small class="gray">Product Manager</small>
+                                </div>
+                            </td>
+                            <td>
+                                <p>83h : <span class="gray">150h</span></p>
+                            </td>
+                            <td>
+                                <p>105</p>
+                            </td>
+                            <td><i class="fa-solid fa-circle-notch fa-2xl" style="color:#E8C369;"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="member">
+                                <div>
+                                    <img
+                                        src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-1.jpg">
+                                </div>
+                                <div>
+                                    <h4>Donald Risher</h4>
+                                    <small class="gray">Product Manager</small>
+                                </div>
+                            </td>
+                            <td>
+                                <p>83h : <span class="gray">150h</span></p>
+                            </td>
+                            <td>
+                                <p>105</p>
+                            </td>
+                            <td><i class="fa-solid fa-circle-notch fa-2xl" style="color:#7A9EE8 ;"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="member">
+                                <div>
+                                    <img
+                                        src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-1.jpg">
+                                </div>
+                                <div>
+                                    <h4>Donald Risher</h4>
+                                    <small class="gray">Product Manager</small>
+                                </div>
+                            </td>
+                            <td>
+                                <p>83h : <span class="gray">150h</span></p>
+                            </td>
+                            <td>
+                                <p>105</p>
+                            </td>
+                            <td><i class="fa-solid fa-circle-notch fa-2xl" style="color:#7A9EE8 ;"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="member">
+                                <div>
+                                    <img
+                                        src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-1.jpg">
+                                </div>
+                                <div>
+                                    <h4>Donald Risher</h4>
+                                    <small class="gray">Product Manager</small>
+                                </div>
+                            </td>
+                            <td>
+                                <p>83h : <span class="gray">150h</span></p>
+                            </td>
+                            <td>
+                                <p>105</p>
+                            </td>
+                            <td><i class="fa-solid fa-circle-notch fa-2xl" style="color:#33CB7E ;"></i></td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+
+            <style>
+                .text {
+                    overflow-y: scroll;
+                    height: 380px;
+                }
+                .text img {
+                    height: 30px;               
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+                .text span,
+                pre {
+                    background-color: #f3f6f9;
+                    padding: 15px;
+                    border-radius: 5px;
+                    margin: 10px;
+                }
+                .text small {
+                    padding: 10px;
+                }
+            </style>
+            <div class="part3" id="two">
+                <div class="chat">
+                    <h3 class="gray">Chat</h3>
+                    <h4><select>
+                            <option selected style="display: none;">Setting</h3>
+                            </option>
+                            <option> View Profile</option>
+                            <option>Archive</option>
+                            <option>Muted</option>
+                            <option>Delete</option>
+                        </select></h4>
+                </div>
+                <style>
+                    .chat select {
+                        color: #878A99;
+                        border: none;
+                    }
+                    .text p {
+                        background-color: #f3f6f9;
+                        padding: 15px;
+                        border-radius: 5px;
+                        margin: 10px;
+                    }
+                    .right p {
+                        text-align: left;
+                        color: #9492E8;
+                        margin: 0px;
+                    }
+                    select option{
+                        width: 200px;
+                    }                    
+                </style>
+                <div class="text">
+                    <ul>
+                        <li>
+                            <div class="message left">
+                                <div><img src="	https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-2.jpg"></div>
+                                <div>
+                                    <p>Good morning 😊</p>
+                                    <small>09:07 am</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="right">
+                            <div class="right">
+                                <p>Good morning, How are you? What about our next meeting?</p><br>
+                                <small><i class="fa-solid fa-check-double"></i>
+                                    09:08 am</small>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="message left">
+                                <div><img src="	https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-2.jpg" alt=""></div>
+                                <div>
+                                    <p>Yeah everything is fine. Our next meeting tomorrow at 10.00 AM
+                                    </p>
+                                    <p>Hey, I'm going to meet a friend of mine at
+                                        the department store. I have to buy
+                                        some presents for my parents 🎁.
+                                    </p>
+                                    <small>09:10 am</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="right">
+                            <div class="right">
+                                <p> Wow that's great</p><br>
+
+                                <small><i class="fa-solid fa-check-double"></i>
+                                    09:12 am</small>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="message left">
+                                <div> <img src="	https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-2.jpg"></div>
+                                <div>
+                                    <img src="https://themesbrand.com/velzon/html/saas/assets/images/small/img-1.jpg" alt="" class="mess5">
+                                    <img src="https://themesbrand.com/velzon/html/saas/assets/images/small/img-2.jpg" alt="" class="mess5">
+                                    <div><small>09:30 am</small></div>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <style>
+                   .left .mess5{
+                        height: 50px;
+                        width: 75px;
+                        border-radius: 5px;
+                    }
+                    #right {
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                    .send input {
+                        width: 80%;
+                        background-color: #f3f6f9;
+                        border: none;
+                        padding: 10px;
+                        border-radius: 5px;
+                    }
+                    .text ul li {
+                        list-style: none;
+
+                    }
+
+                    .message {
+                        display: flex;
+                    }
+
+                    /* width */
+                    ::-webkit-scrollbar {
+                        width: 10px;
+                    }
+
+                    /* Handle */
+                    ::-webkit-scrollbar-thumb {
+                        background: white;
+                        border-radius: 10px;
+                    }
+
+                    /* Handle on hover */
+                    ::-webkit-scrollbar-thumb:hover {
+                        background: #f3f6f9;
+                    }
+
+                    .left,
+                    .right {
+                        width: 70%;
+                    }
+
+                    .right {
+                        text-align: right;
+                        display: inline;
+                    }
+
+                    .send span {
+                        background-color: #50C3E6;
+                        color: white;
+                        padding: 10px 15px;
+                        text-align: center;
+                        border-radius: 5px;
+                        margin: 0px 8px;
+                        font-weight: bold;
+                    }
+                </style>
+                <div class="send">
+                    <input type="text" placeholder="Enter Message...">
+                    <span>Send <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-send" viewBox="0 0 16 16">
+                            <path
+                                d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
+                        </svg></span>
+                </div>
+            </div>
+            <style>
+                .send{
+                    margin-top: 15px;
+                    border-top: 1px solid #f3f6f9;
+                }
+                .chat {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+
+                #status {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid #F3F6F9;
+                }
+
+                #three {
+                    background-color: white;
+                    padding: 10px;
+                    border-radius: 10px;
+                }
+
+                #status select {
+                    border: none;
+                    color: #8F939F;
+                }
+            </style>
+
+            <div class="part3" id="three">
+                <div id="status">
+                    <h3 class="gray">Project Status</h3>
+                    <h4><Select>
+                            <option>All Time</option>
+                            <option>Last 7 Days</option>
+                            <option>Last 30 Days</option>
+                            <option>Last 90 Days</option>
+                        </Select></h4>
+                </div>
+                <div>
+                    <img src="4.png">
+                </div>
+                <div>
+                    <style>
+                        .fa-circle {
+                            margin-right: 10px;
+                        }
+
+                        .prostatus td {
+                            padding: 10px;
+                        }
+                    </style>
+                    <table class="prostatus">
+                        <tr>
+                            <td><i class="fa-solid fa-circle" style="color: #13c56b;"></i>Completed</td>
+                            <td> 125 Projects</td>
+                            <td>15870hrs</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-circle" style="color: #6691E7;"></i>In Progress</td>
+                            <td>42 Projects</td>
+                            <td>243hrs</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-circle" style="color: #E8BC52;"></i>Yet to Start</td>
+                            <td>58 Projects</td>
+                            <td>-2050hrs</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-circle" style="color: #ED5E5E;"></i>Cancelled</td>
+                            <td>89 Projects</td>
+                            <td>-900hrs</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div>
+            <p style="margin-left: 50px;">2024 © Velzon.</p>
+        </div>
+        <div>
+            <p style="margin-right: 50px;">Design & Develop by Themesbrand</p>
+        </div>
+    </footer>
+    <style>
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            height: 50px;
+            margin-top: 20px;
+        }
+    </style>
+</body>
+
+</html>

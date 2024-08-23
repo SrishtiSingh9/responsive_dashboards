@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template 02</title>
+</head>
+<style>
+    html {
+        font-size: 22px;
+    }
+
+    body {
+        padding: 1rem;
+    }
+
+    .card {
+        background-color: dodgerblue;
+        color: white;
+        padding: 1rem;
+        height: 260px;
+    }
+
+    .main-container {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+   
+  
+    div{
+        display: grid;
+    }
+    section .right-container .upper-part{
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 1rem;
+
+    }
+    section .left-container .card{
+        height: 600px;
+    }
+    section .right-container .lower-part{
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+
+    }
+    section .right-container{
+        display: grid;
+        gap: 1rem;
+    }
+   
+</style>
+
+<body>
+    <section class="main-container">
+        <div class="left-container">
+            <div class="card">ONE</div>
+        </div>
+        <div class="right-container">
+            <div class="upper-part">
+                <div class="card">TWO</div>
+                <div class="card">THREE</div>
+                <div class="card">FOUR</div>
+            </div>
+            <div class="lower-part">
+                <div class="card">FIVE</div>
+                <div class="card">SIX</div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
